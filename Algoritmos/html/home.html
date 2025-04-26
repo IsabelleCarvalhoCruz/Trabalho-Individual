@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Ballet</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="#" class="tsize">Home</a>
+            <a href="#" class="tsize">Sobre</a>
+            <a href="#" class="tsize">Contato</a>
+            <a href="#" class="tsize">Login</a>
+            <p>Pesquisa:</p>
+            <input type="text" class="fa fa-search" aria-hidden="true">
+    </div>
+
+        <div class="slideshow">
+            <img class="slides" src="../imagens/ballet2teste.jpg">
+            <img class="slides" src="../imagens/ballet2teste.jpg">
+            <img class="slides" src="../imagens/ballet3.jpg">
+            <img class="slides" src="../imagens/ballet4teste.jpg">
+            <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="display-right" onclick="plusDivs(+1)" >&#10095;</button>
+            <h1 class="titulo">Somente você é capaz de realizar seus sonhos!</h1>
+            <button class="butao"><a href="#">Saiba Mais</a></button>
+        </div>
+
+        <div class="conteudo">
+            <h1 class="titulo">Aqui você aprenderá:</h1>
+            <div class="imagens">
+                <img src="../imagens/sapatilhas.png" class="img1">
+                <img src="../imagens/yoga2.png" class="img2">
+                <img src="../imagens/alongamento4.png" class="img3">
+            </div>
+            <div class="texto">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            </div>
+        </div>
+        <div class="conteudo2">
+            <div class="texto2">  
+                <h1>Sobre o projeto:</h1>
+            </div>
+            <div class="texto3">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique harum iste incidunt nesciunt obcaecati, sed corporis natus? Maiores et ut ex? Rerum veritatis, ut numquam vero autem earum tempore adipisci. Lorem</h2>
+                <div class="imagens2">
+                    <img src="../imagens/ballet5.avif">
+                </div>
+            </div>        
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+
+}
+</script>
