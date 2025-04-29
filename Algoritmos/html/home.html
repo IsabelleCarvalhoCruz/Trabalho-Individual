@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <title>Ballet</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Fonteyn</title>
 </head>
 <body>
     <div class="container">
         <div class="navbar">
-            <a href="#" class="tsize">Home</a>
-            <a href="#" class="tsize">Sobre</a>
-            <a href="#" class="tsize">Contato</a>
-            <a href="#" class="tsize">Login</a>
+            <img src="../imagens/ballet6.webp">
+            <h1>Fontayn</h1>
+            <a href="home.html" class="tsize">Home</a>
+            <a href="sobre.html" class="tsize">Sobre</a>
+            <a href="suporte.html" class="tsize">Suporte</a>
+            <a href="quizz.html" class="tsize">Quizz</a>
+            <a href="login.html" class="tsize">Login</a>
             <p>Pesquisa:</p>
-            <input type="text" class="fa fa-search" aria-hidden="true">
+            <input type="text" class="search" aria-hidden="true">
+            <button onclick="Pesquisar()" class="butao1">OK</button>
     </div>
 
         <div class="slideshow">
             <img class="slides" src="../imagens/ballet2teste.jpg">
-            <img class="slides" src="../imagens/ballet2teste.jpg">
+            <img class="slides" src="../imagens/ballet1.jpg">
             <img class="slides" src="../imagens/ballet3.jpg">
             <img class="slides" src="../imagens/ballet4teste.jpg">
             <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="display-right" onclick="plusDivs(+1)" >&#10095;</button>
             <h1 class="titulo">Somente você é capaz de realizar seus sonhos!</h1>
-            <button class="butao"><a href="#">Saiba Mais</a></button>
+            <button class="butao2"><a href="#">Saiba Mais</a></button>
         </div>
 
         <div class="conteudo">
@@ -53,6 +56,34 @@
                 </div>
             </div>        
         </div>
+
+        <div class="conteudo3">
+            <div class="curiosidades">
+                <div class="curiosidade1">
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                </div>
+                <div class="curiosidade2">
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                </div>
+                <div class="curiosidade3">
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="contato">
+            <h1>Contate-nos!</h1>
+            <h2>Digite seu email:</h2>
+            <input type="text" class="nome" id="ipt_email" placeholder="Email">
+            <h2>Digite sua senha:</h2>
+            <input type="password" class="senha" id="ipt_senha" placeholder="Senha">
+            <button onclick="Validar()">Enviar</button>
+        </div>
+
+        <div class="footer">
+            <img src="../imagens/ballet6.webp">
+            <h3>Fonteyn</h3> 
+        </div>
     </div>
 </body>
 </html>
@@ -68,7 +99,7 @@ function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("slides");
   if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
+  if (n < 1) {slideIndex = x.length};
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
