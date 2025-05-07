@@ -28,7 +28,6 @@ body{
     background-image: linear-gradient(to bottom right, #ffd1e2, #f3a4c1);
     font-size: 25px;
     padding: 7px 110px 7px 10px;
-    transition: all 0.3;
 }
 
 .navbar a, .navbar p{
@@ -253,6 +252,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 20px;
 }
 
 .curiosidade1{
@@ -281,6 +281,68 @@ body{
     background-color: #ffd1e2;
     margin: 10px;
     padding: 10px;
+}
+
+.contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.contato h1{
+    font-size: 25px;
+}
+
+.contato h2{
+    font-size: 20px;
+}
+
+.contato .email{
+    border: none;
+    padding: 7px;
+    border-radius: 3px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.contato .nome{
+    border: none;
+    padding: 7px;
+    border-radius: 3px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.contato .mensagem{
+    border: none;
+    padding: 10px 30px 60px 10px;
+    border-radius: 3px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.contato button{
+    border: none;
+    padding: 7px;
+    border-radius: 3px;
+    color: #fffbf3;
+    background-image: linear-gradient(to bottom right, #ffd1e2, #f3a4c1);
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: flex-end;
+    background-image: linear-gradient(to bottom right, #ffd1e2, #f3a4c1);
+
+    padding: 10px 1100px 10px 100px;
+}
+
+.footer img{
+    height: 110px;
+    width: 100%;
 }
 
 ::-webkit-scrollbar{
