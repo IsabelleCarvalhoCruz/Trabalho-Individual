@@ -14,9 +14,9 @@ body{
     align-items: flex-start;
     justify-content: flex-start;
 
-    transform: translateY(-500%);
-    margin: 0px 750px 0px 0px;
-    z-index: 1;
+    transform: translateY(-450%);
+    margin: 0px 0px 0px 700px;
+    z-index: 2;
     color: #fffbf3;
 }
 
@@ -40,7 +40,7 @@ body{
 .registro{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .reg{
@@ -52,15 +52,15 @@ body{
     transform: translateY(-130%);
 
 
-    padding: 250px 150px 250px 150px;
-    margin-top: 70px;
+    padding: 250px 150px 250px 120px;
+    margin-top: 115px;
     /* background-color: #eaa9d6; */
-    background-image: linear-gradient(to bottom right, #f34786, #f3a4c1);
+    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
     color:  #fffbf3;
     z-index: 2;
 
     opacity: 100%;
-    box-shadow: 10px 3px 3px white;
+    /* box-shadow: 3px 3px 3px white; */
 }
 
 .reg input{
@@ -71,15 +71,30 @@ body{
 }
 
 .reg button{
-    background-image: linear-gradient(to bottom right, #ffd1e2, #f3a4c1);
+    background-image: linear-gradient(to bottom right, #9B111E, #cc4a48);
     color: #fffbf3;
     border: none;
     border-radius: 5px;
-    padding: 10px 130px 10px 130px;
-    margin: 15px 0px 15px 0px;
+    padding: 10px 110px 10px 120px;
+    margin: 25px 0px 15px 0px;
 }
 
 .reg a{
     text-decoration: none;
     color: #fffbf3;
 }
+
+.cadastro a{
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fffbf3;
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.cadastro a:hover{
+    color: #cc4a48;
+    font-size: 22px;
+}
+

@@ -1,7 +1,59 @@
 body{
+    overflow: hidden;
     height: 100%;
     width: 100%;
     margin: 0;
     top: 0;
     bottom: 0;
+    background-color: #fffbf3;
+}
+
+.container-dashboard{
+    height: 100%;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #fffbf3;
+}
+
+.navbar-dashboard{
+    position: fixed;
+    z-index: 0;
+    background-image: linear-gradient(to top right,#9B111E, #71100F);
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 100px 20px 500px 20px;
+}
+
+.navbar-dashboard h1{
+    font-size: 23px;
+    color: beige;
+}
+
+.navbar-dashboard a{
+    font-size: 23px;
+    text-decoration: none;
+    color: beige;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-dashboard a:hover{
+    color: #9B111E;
+    font-size: 26px;
+}
+
+.graficos{
+    position: absolute;
+    background-color: #fffbf3;
+    margin-left: 500px;
+    transform: translateY(100%);
+    z-index: 1;
+}
+
+.graficos h1{
+    font-size: 28px;
 }

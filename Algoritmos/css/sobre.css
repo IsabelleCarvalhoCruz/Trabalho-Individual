@@ -23,9 +23,9 @@ body{
     justify-content: space-evenly;
     align-items: center;
     /* background-color:#eaa9d6; */
-    background-image: linear-gradient(to bottom right, #ffd1e2, #f3a4c1);
+    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
     font-size: 25px;
-    padding: 7px 110px 7px 10px;
+    padding: 7px 115px 7px 20px;
 }
 
 .navbar a, .navbar p{
@@ -47,7 +47,7 @@ body{
 }
 
 .butao1{
-    background-color:#ffd1e2;
+    background-color:#9B111E;
     color: #fffbf3;
     border: none;
     padding: 5px;
@@ -63,12 +63,12 @@ body{
 }
 
 .navbar a:hover {
-   color: #ffd1e2;
+   color: #9B111E;
    font-size: 27px;
 }
 
 .topo{
-    background-image: linear-gradient(to bottom right, #ffd1e2, #f3a4c1);
+    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
     padding: 200px 678px 200px 678px;
 }
 
@@ -79,6 +79,7 @@ body{
     position: absolute;
     transform: translateY(90%);
     margin-left: 450px;
+    filter: grayscale(100%);
 }
 
 .conteudo1{
@@ -102,7 +103,7 @@ body{
 .conteudo2{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to bottom right, #ffd1e2, #f3a4c1);
+    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
     padding: 10px 140px 10px 140px;
 }
 
@@ -151,7 +152,7 @@ body{
     flex-direction: row;
     justify-content: flex-start; 
     align-items: flex-end;
-    background-image: linear-gradient(to bottom right, #ffd1e2, #f3a4c1);
+    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
 
     padding: 10px 1100px 10px 100px;
 }
@@ -168,5 +169,5 @@ body{
   
   ::-webkit-scrollbar-thumb{
     /* background-color:#eaa9d6; */
-    background-image: linear-gradient(to bottom right, #ffd1e2, #f3a4c1);
+    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
   }
