@@ -14,7 +14,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #fffbf3;
+    background-color: #F2F2F2;
 }
 
 .navbar{
@@ -23,14 +23,14 @@ body{
     justify-content: space-evenly;
     align-items: center;
     /* background-color:#eaa9d6; */
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    background-image: linear-gradient(to bottom right, #9E1B32);
     font-size: 25px;
-    padding: 7px 115px 7px 20px;
+    padding: 7px 60px 7px 9px;
 }
 
 .navbar a, .navbar p{
     text-decoration: none;
-    color:#fffbf3;
+    color:#F2F2F2;
     padding: 0px 10px 0px 10px;
     font-weight: bolder;
     transition: all 0.3s ease-in-out;
@@ -39,36 +39,38 @@ body{
 .navbar img{
     height: 100px;
     width: 110px;
+    filter: invert(100%);
 }
 
 .navbar h1{
     font-size: 35px;
     padding-right: 100px;
+    color: #F2F2F2;
 }
 
 .butao1{
-    background-color:#9B111E;
-    color: #fffbf3;
+    background-color: #68061D;
+    color: #F2F2F2;
     border: none;
-    padding: 5px;
+    padding: 4px;
     font-weight: bolder;
     margin-left: 10px;
     margin-right: 100px;
 }
 
 .search{
-    background-color: #fffbf3;
+    background-color: #F2F2F2;
     border: none;
-    padding: 3px;
+    padding: 2px;
 }
 
 .navbar a:hover {
-   color: #9B111E;
+   color: #D34C52;
    font-size: 27px;
 }
 
 .topo{
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    background-image: linear-gradient(to bottom right, #9E1B32);
     padding: 200px 678px 200px 678px;
 }
 
@@ -83,7 +85,7 @@ body{
 }
 
 .conteudo1{
-    background-color: #fffbf3;
+    background-color: #F2F2F2;
     padding: 200px;
 }
 
@@ -103,14 +105,14 @@ body{
 .conteudo2{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    background-image: linear-gradient(to bottom right, #9E1B32);
     padding: 10px 140px 10px 140px;
 }
 
 .titulo2{
     margin-left: 400px;
     font-weight: bolder;
-    color:#fffbf3;
+    color:#F2F2F2;
 }
 
 .imagens{
@@ -142,7 +144,7 @@ body{
 
 .conteudo3{
     position: relative;
-    background-color:#fffbf3;
+    background-color:#F2F2F2;
     color: black;
     padding: 100px 100px 200px 200px;
 }
@@ -152,22 +154,24 @@ body{
     flex-direction: row;
     justify-content: flex-start; 
     align-items: flex-end;
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    background-image: linear-gradient(to bottom right, #9E1B32);
 
     padding: 10px 1100px 10px 100px;
+    color: #F2F2F2;
 }
 
 .footer img{
     height: 110px;
     width: 100%;
+    filter: invert(100%);
 }
 
 ::-webkit-scrollbar{
     width: 10px;
-    background-color:#fffbf3;
+    background-color:#F2F2F2;
   }
   
   ::-webkit-scrollbar-thumb{
     /* background-color:#eaa9d6; */
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    background-image: linear-gradient(to bottom right, #9E1B32);
   }

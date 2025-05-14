@@ -16,7 +16,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #fffbf3;
+    background-color: #F2F2F2;
 }
 
 .navbar{
@@ -24,20 +24,21 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    background-image: linear-gradient(to bottom right,#9E1B32);
     font-size: 25px;
-    padding: 7px 115px 7px 20px;
+    padding: 7px 60px 7px 9px;
 }
 
 .navbar a, .navbar p{
     text-decoration: none;
-    color:#fffbf3;
+    color:#F2F2F2;
     padding: 0px 10px 0px 10px;
     font-weight: bolder;
     transition: all 0.3s ease-in-out;
 }
 
 .navbar img{
+    filter: invert(100%);
     height: 100px;
     width: 110px;
 }
@@ -45,26 +46,27 @@ body{
 .navbar h1{
     font-size: 35px;
     padding-right: 100px;
+    color: #F2F2F2;
 }
 
 .butao1{
-    background-color:#9B111E;
-    color: #fffbf3;
+    background-color:#68061D;
+    color: #F2F2F2;
     border: none;
-    padding: 5px;
+    padding: 4px;
     font-weight: bolder;
     margin-left: 10px;
     margin-right: 100px;
 }
 
 .search{
-    background-color: #fffbf3;
+    background-color: #F2F2F2;
     border: none;
-    padding: 3px;
+    padding: 2px;
 }
 
 .navbar a:hover {
-   color: #9B111E;
+   color: #D34C52;
    font-size: 27px;
 }
 
@@ -84,37 +86,39 @@ body{
   width: 100%;
   height: 140%;
   z-index: 0;
-  filter: blur(5px);
+  filter: blur(5px) grayscale(100%);
 }
 
 .butao2{
     position: absolute;
     transform: translateY(800%);
     margin-left: 50px;
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    background-image: linear-gradient(to bottom right, #9E1B32);
     padding: 10px;
     border: none;
     z-index: 1;
+    filter: drop-shadow(6px 4px 8px black);
 }
 
 .butao2 a{
     font-weight: bolder;
     text-decoration: none;
-    color:#fffbf3;
+    color:#F2F2F2;
     font-size: 15px;
     z-index: 1;
     transition: all 0.3s ease-in-out;
 }
 
 .butao2 a:hover{
-    color: #9B111E;
+    color: #D34C52;
     font-size: 16px;
 }
 
 .slideshow1 h2{
     position: absolute;
-    color: #fffbf3;
+    color: #F2F2F2;
     z-index: 2;
+    filter: drop-shadow(6px 4px 8px black);
 }
 
 .primeiro{
@@ -166,12 +170,13 @@ body{
     margin-left: 1053px;
 
     padding: 15px;
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
-    color:#fffbf3;
+    background-image: linear-gradient(to bottom right, #9E1B32);
+    color:#F2F2F2;
 
     border: none;
     z-index: 2;
     transition: all 0.3s ease-in-out;
+    filter: drop-shadow(1px 1px 2px black);
 }
 
 .display-left{
@@ -180,12 +185,13 @@ body{
     margin-left: 470px; 
 
     padding: 15px;
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
-    color:#fffbf3;
+    background-image: linear-gradient(to bottom right, #9E1B32);
+    color:#F2F2F2;
 
     border: none;
     z-index: 2;
     transition: all 0.3s ease-in-out;
+    filter: drop-shadow(1px 1px 2px black);
 }
 
 .slides{
@@ -203,14 +209,14 @@ body{
 .conteudo{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    background-image: linear-gradient(to bottom right, #9E1B32);
     padding: 30px 100px 50px 100px;
 }
 
 .titulo{
     margin-left: 415px;
     font-weight: bolder;
-    color:#fffbf3;
+    color:#F2F2F2;
 }
 
 .imagens{
@@ -249,7 +255,7 @@ body{
 
 .texto h2{
     font-size: 20px;
-    color:#fffbf3;
+    color:#F2F2F2;
     padding: 0px 100px 0px 50px;
 }
 
@@ -257,7 +263,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: #fffbf3;
+    background-color: #F2F2F2;
     padding: 0px 0px 20px 100px;
 }
 
@@ -287,29 +293,28 @@ body{
 }
 
 .conteudo3{
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
-    color: #fffbf3;
+    background-image: linear-gradient(to bottom right, #9E1B32);
+    color: #F2F2F2;
     padding: 30px 120px 50px 120px;
 }
 
 .conteudo3 button{
-    color:#fffbf3;
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    color:#F2F2F2;
+    background-image: linear-gradient(to bottom right, #9E1B32);
     padding: 10px;
     border: none;
-    border-radius: 7px;
 }
 
 .conteudo3 a{
     font-weight: bolder;
     text-decoration: none;
-    color:#fffbf3;
+    color:#F2F2F2;
     font-size: 15px;
     transition: all 0.3s ease-in-out;
 }
 
 .conteudo3 a:hover{
-    color: #9B111E;
+    color:#D34C52;
     font-size: 16px;
 }
 
@@ -338,6 +343,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     margin: 0px 50px 0px 50px;
+    filter: drop-shadow(3px 2px 4px black);
 }
 
 .conteudo3 h1{
@@ -354,10 +360,9 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: #9B111E;
+    background-color:#68061D;
     margin-right: 60px;
     padding: 50px 80px 90px 80px;
-    border-radius: 7px;
 }
 
 .curiosidade2{
@@ -365,20 +370,18 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #9B111E;
+    background-color:#68061D;
     margin-right: 60px;
     padding: 50px 40px 90px 60px;
-    border-radius: 7px;
 }
 
 .curiosidade3{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    background-color: #9B111E;
+    background-color:#68061D;
     margin-right: 60px;
     padding: 50px 80px 90px 60px;
-    border-radius: 7px;
 }
 
 .contato{
@@ -424,8 +427,8 @@ body{
     border: none;
     padding: 7px;
     border-radius: 3px;
-    color: #fffbf3;
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    color: #F2F2F2;
+    background-image: linear-gradient(to bottom right, #9E1B32);
 }
 
 .footer{
@@ -433,22 +436,24 @@ body{
     flex-direction: row;
     justify-content: flex-start; 
     align-items: flex-end;
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    background-image: linear-gradient(to bottom right, #9E1B32);
+    color: #F2F2F2;
 
     padding: 10px 1100px 10px 100px;
 }
 
 .footer img{
+    filter: invert(100%);
     height: 110px;
     width: 100%;
 }
 
 ::-webkit-scrollbar{
     width: 10px;
-    background-color:#fffbf3;
+    background-color:#F2F2F2;
   }
   
   ::-webkit-scrollbar-thumb{
     /* background-color:#eaa9d6; */
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
+    background-image: linear-gradient(to bottom right, #9E1B32);
   }

@@ -5,14 +5,14 @@ body{
     margin: 0;
     top: 0;
     bottom: 0;
-    background-color:#F2F2F2;
+    background-color: #F2F2F2;
 }
 
 .container-dashboard{
     height: 100%;
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color:#F2F2F2;
+    background-color: #F2F2F2;
 }
 
 .navbar-dashboard{
@@ -31,29 +31,17 @@ body{
 
 .navbar-dashboard h1{
     font-size: 23px;
-    color: beige;
+    color: #F2F2F2;
 }
 
 .navbar-dashboard a{
     font-size: 23px;
     text-decoration: none;
-    color: beige;
+    color: #F2F2F2;
     transition: all 0.3s ease-in-out;
 }
 
 .navbar-dashboard a:hover{
     color: #D34C52;
     font-size: 26px;
-}
-
-.graficos{
-    position: absolute;
-    background-color:#F2F2F2;
-    margin-left: 620px;
-    transform: translateY(50%);
-    z-index: 1;
-}
-
-.graficos h1{
-    font-size: 28px;
 }

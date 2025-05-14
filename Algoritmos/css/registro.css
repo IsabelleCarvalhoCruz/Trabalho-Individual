@@ -17,7 +17,8 @@ body{
     transform: translateY(-450%);
     margin: 0px 0px 0px 700px;
     z-index: 2;
-    color: #fffbf3;
+    color: #F2F2F2;
+    filter: drop-shadow(6px 4px 8px black);
 }
 
 .imagem{
@@ -55,8 +56,8 @@ body{
     padding: 250px 150px 250px 120px;
     margin-top: 115px;
     /* background-color: #eaa9d6; */
-    background-image: linear-gradient(to bottom right, #9B111E, #71100F);
-    color:  #fffbf3;
+    background-image: linear-gradient(to bottom right, #9E1B32);
+    color:  #F2F2F2;
     z-index: 2;
 
     opacity: 100%;
@@ -64,15 +65,15 @@ body{
 }
 
 .reg input{
-    color: #fffbf3;
+    color: #F2F2F2;
     border: none;
     border-radius: 5px;
     padding: 10px 100px 10px 20px;
 }
 
 .reg button{
-    background-image: linear-gradient(to bottom right, #9B111E, #cc4a48);
-    color: #fffbf3;
+    background-image: linear-gradient(to bottom right, #cc4a48);
+    color: #F2F2F2;
     border: none;
     border-radius: 5px;
     padding: 10px 110px 10px 120px;
@@ -81,14 +82,14 @@ body{
 
 .reg a{
     text-decoration: none;
-    color: #fffbf3;
+    color: #F2F2F2;
 }
 
 .cadastro a{
     margin-bottom: 10px;
     text-decoration: none;
     font-size: 20px;
-    color: #fffbf3;
+    color: #F2F2F2;
     font-weight: bolder;
     transition: all 0.3s ease-in-out;
 }
