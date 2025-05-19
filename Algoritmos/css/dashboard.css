@@ -18,7 +18,7 @@ body{
 .navbar-dashboard{
     position: fixed;
     z-index: 0;
-    background-image: linear-gradient(to top right,#9E1B32);
+    background-image: linear-gradient(to top right,#9E1B32, #D34C52);
     font-weight: bolder;
     font-size: 20px;
     display: flex;
@@ -26,18 +26,18 @@ body{
     justify-content: space-between;
     align-items: flex-start;
 
-    padding: 100px 20px 500px 20px;
+    padding: 100px 25px 500px 20px;
 }
 
 .navbar-dashboard h1{
-    font-size: 23px;
-    color: beige;
+    font-size: 25px;
+    color: white;
 }
 
 .navbar-dashboard a{
-    font-size: 23px;
+    font-size: 25px;
     text-decoration: none;
-    color: beige;
+    color: white;
     transition: all 0.3s ease-in-out;
 }
 
@@ -47,13 +47,79 @@ body{
 }
 
 .graficos{
-    position: absolute;
     background-color:#F2F2F2;
-    margin-left: 620px;
-    transform: translateY(50%);
-    z-index: 1;
-}
+    display: flex;
+    flex-direction: row;
+} 
 
 .graficos h1{
+    margin: 10px;
     font-size: 28px;
+}
+
+.bloco1 h2{
+    font-size: 28px;
+    margin-left: 35px;
+}
+
+.bloco2 h2{
+    font-size: 28px;
+    margin-left: 57px;
+}
+
+.graficos h3{
+    font-size: 16px;
+    margin: 10px;
+    background-color: #D34C52;
+}
+
+.bloco1{
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: lightgray;
+    margin: 20px 0px 450px 120px;
+    padding: 10px 40px 0px 40px;
+    filter: drop-shadow(4px 7px 10px gray);
+    border-radius: 3px;
+}
+
+.bloco2{
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgray;
+    margin: 20px 0px 450px 100px;
+    padding: 10px 20px 0px 20px;
+    filter: drop-shadow(4px 7px 10px gray);
+    border-radius: 3px;
+}
+
+.grafico-pizza{
+    height: 100%;
+    width: 260px;
+}
+
+.grafico-barra{
+    height: 200px;
+    width: 560px;
+}
+
+.grafico1{
+    position: relative;
+    background-color: lightgray;
+    margin: 200px 0px 20px -37%;
+    padding: 10px 20px 0px 20px;
+    filter: drop-shadow(4px 7px 10px gray);
+    border-radius: 3px;
+}
+
+.grafico2{
+    height: 100%;
+    width: 260px;
+    margin: 20px 0px 0px 8%;
+    padding: 10px 20px 10px 20px;
+    background-color: lightgray;
+    filter: drop-shadow(4px 7px 10px gray);
+    border-radius: 3px;
 }
