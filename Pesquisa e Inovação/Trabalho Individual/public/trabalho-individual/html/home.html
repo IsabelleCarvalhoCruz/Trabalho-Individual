@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Fonteyn</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="../imagens/ballet6.webp">
+            <h1>Fonteyn</h1>
+            <a href="home.html" class="tsize">Home</a>
+            <a href="sobre.html" class="tsize">Sobre</a>
+               <a href="blog.html" class="tsize">Blog</a>
+            <a href="forum.html" class="tsize">Forum</a>
+            <a href="quizz.html" class="tsize">Quizz</a>
+            <a href="login.html" class="tsize">Login</a>
+            <p>Pesquisa:</p>
+            <input type="text" class="search" aria-hidden="true">
+            <button onclick="Pesquisar()" class="butao1">OK</button>
+    </div>
+
+ 
+    <div class="slideshow1">
+    <img src="../imagens/ballet1.jpg">
+    <div class="principal">
+        <h2 class="primeiro">Somente você é capaz de realizar seus sonhos! </h2>
+        <h2 class="segundo"> Incentivamos sonhos em busca das suas realizações pessoais.</h2>
+    </div>
+    <button class="butao2"><a href="#">Saiba Mais</a></button>
+</div>
+        <div class="conteudo">
+            <h1 class="titulo">Aqui você aprenderá:</h1>
+            <div class="imagens">
+                <img src="../imagens/sapatilhas.png" class="img1">
+                <img src="../imagens/yoga2.png" class="img2">
+                <img src="../imagens/alongamento4.png" class="img3">
+            </div>
+            <div class="texto">
+                <h2>Exercicios de ballet e conhecimentos gerais sobre o universo bailerinístico!</h2>
+                <h2>Saúde e movimento através de cursos e exercícios exclusivos somente para você!</h2>
+                <h2>Lições e debates gerais sobre a dança e a arte!</h2>
+            </div>
+        </div>
+
+        <div class="slideshow2">
+        <h1>Benefícios Físicos do Ballet:</h1>
+        <h2>1.Melhora da postura</h2>
+        <h2>2.Aumento da flexibilidade</h2>
+        <h2>3.Fortalecimento da musculatura</h2>
+        <h2>4.Melhora da coordenação motora</h2>
+        <h2>5.Melhora da resistência física</h2>
+        <h2>6.Queima de calorias</h2>
+
+            <img class="slides" src="../imagens/ballet2teste.jpg">
+            <img class="slides" src="../imagens/ballet1.jpg">
+            <img class="slides" src="../imagens/ballet3.jpg">
+            <img class="slides" src="../imagens/ballet4teste.jpg">
+            <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="display-right" onclick="plusDivs(+1)" >&#10095;</button>
+        </div>
+
+        <div class="conteudo3">
+            <h1>Saiba Mais:</h1>
+            <div class="curiosidades">
+                <div class="curiosidade1">
+                    <h2>Saiba sobre a história do ballet.</h2>
+                    <a href="#"><button class="butao3">Clique aqui</button></a>
+                </div>
+                <div class="curiosidade2">
+                    <h2>Saiba sobre os benefícios do ballet para a saúde e seu foco.</h2>
+                     <a href="#"><button class="butao4">Clique aqui</button></a>
+                </div>
+                <div class="curiosidade3">
+                    <h2>Saiba sobre variações e apresentações teatrais no mundo do ballet.</h2>
+                     <a href="#"><button class="butao5">Clique aqui</button></a>
+                </div>
+            </div>
+        </div>
+
+               <div class="conteudo2">
+            <div class="texto2">  
+                <h1>Sobre o projeto:</h1>
+            </div>
+            <div class="texto3">
+                <h2>Fonteyn é um projeto que visa promover a arte e a dança através do Ballet, 
+                    incentivando pessoas a correrem atrás de seus sonhos e relizando através do projeto 
+                objetivos de vida e seus própositos.</h2>
+            </div>      
+             <div class="imagens2">
+                    <img src="../imagens/ballerina-pointe.gif">
+                </div>  
+        </div>
+
+        <div class="contato">
+            <h1>Contate-nos!</h1>
+            <h2>Digite seu email:</h2>
+            <input type="text" class="nome" id="ipt_email" placeholder="Email">
+            <h2>Digite seu nome:</h2>
+            <input type="text" class="nome" id="ipt_nome" placeholder="Nome">
+            <h2>Mande uma mensagem!</h2>
+            <input type="text" class="mensagem" id="ipt_mensagem" placeholder="Digite aqui sua mensagem!">
+            <button onclick="Validar()">Enviar</button>
+        </div>
+
+        <div class="footer">
+            <img src="../imagens/ballet6.webp">
+            <h3>Fonteyn</h3> 
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length};
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+
+}
+</script>
