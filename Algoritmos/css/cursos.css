@@ -45,3 +45,59 @@ body{
     color: #D34C52;
     font-size: 26px;
 }
+
+.cursos{
+    display: flex;
+    flex-direction: row;
+}
+
+.curso1{
+    background-color: whitesmoke;
+    margin: 80px 240px 100px 330px;
+    padding: 5px;
+    align-items: center;
+    filter: drop-shadow(5px 4px 10px gray);
+}
+
+.curso1 img{
+    height: 200px;
+    width: 300px;
+}
+
+.curso1  h1{
+    margin-left: 30%;
+}
+
+.curso1 button{
+    border: none;
+    background-color: #D34C52;
+    color: #F2F2F2;
+    padding: 5px;
+    margin-left: 30%;
+}
+
+
+.curso2{
+    background-color: whitesmoke;
+    margin: 80px 240px 100px 20px;
+    padding: 5px;
+    align-items: center;
+    filter: drop-shadow(5px 4px 10px gray);
+}
+
+.curso2 img{
+    height: 200px;
+    width: 300px;
+}
+
+.curso2 button{
+    border: none;
+    background-color: #D34C52;
+    color: #F2F2F2;
+    padding: 5px;
+    margin-left: 30%;
+}
+
+.curso2  h1{
+    margin-left: 30%;
+}

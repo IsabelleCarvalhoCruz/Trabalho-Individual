@@ -25,7 +25,7 @@ body{
     /* background-color:#eaa9d6; */
     background-image: linear-gradient(to bottom right, #9E1B32);
     font-size: 25px;
-    padding: 7px 60px 7px 9px;
+    padding: 7px 5.7% 7px 0px;
 }
 
 .navbar a, .navbar p{
@@ -67,6 +67,51 @@ body{
 .navbar a:hover {
    color: #D34C52;
    font-size: 27px;
+}
+
+
+
+.forum{
+    background-color: #9E1B32;
+    padding: 20px 40% 20px 40%;
+}
+
+.principal h1{
+    font-size: 30px;
+    color: #F2F2F2;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo h3{
+    font-size: 20px;
+    color: #F2F2F2;
+    margin-left: -25%;
+}
+
+.pesquisar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pesquisar button{
+    border: none;
+    color: #F2F2F2;
+    background-color: #D34C52;
+    padding: 6px;
+    margin-left: 3%;
+}
+
+.pesquisar input{
+    background-color: #F2F2F2;
+    border: none;
+    padding: 6px 70% 6px 65%;
+    margin-left: -70%;
 }
 
 .footer{

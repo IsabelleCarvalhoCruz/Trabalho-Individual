@@ -67,13 +67,13 @@ body{
 
 .navbar a:hover {
    color: #D34C52;
-   font-size: 27px;
+   font-size: 25px;
 }
 
 .slideshow1 {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 550px;
   overflow: hidden;
 }
 
@@ -111,7 +111,7 @@ body{
 
 .butao2 a:hover{
     color: #D34C52;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .slideshow1 h2{
@@ -232,8 +232,8 @@ body{
 }
 
 .imagens .img1{
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
 }
 
 .imagens .img2{
@@ -242,8 +242,8 @@ body{
 }
 
 .imagens .img3{
-    width: 135px;
-    height: 135px;
+    width: 110px;
+    height: 110px;
 }
 
 .texto{
@@ -264,13 +264,13 @@ body{
     flex-direction: row;
     justify-content: flex-start;
     background-color: #F2F2F2;
-    padding: 0px 0px 20px 100px;
+    padding: 0px 0px 100px 100px;
 }
 
 .conteudo2 img{
     filter: grayscale(100%);
-    height: 400px;
-    width: 580px;
+    height: 480px;
+    width: 600px;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 100%); 
 }
 
@@ -321,21 +321,21 @@ body{
 .butao3{
     z-index: 2;
     position: absolute;
-    margin: 100px 0px 0px -120px;
+    margin: 100px 0px 0px -90px;
 }
 
 
 .butao4{
     z-index: 2;
     position: absolute;
-    margin: 70px 0px 0px -180px;
+    margin: 70px 0px 0px -150px;
 }
 
 
 .butao5{
     z-index: 2;
     position: absolute;
-    margin: 100px 0px 0px -190px;
+    margin: 100px 0px 0px -160px;
 }
 
 .curiosidades{
@@ -362,7 +362,7 @@ body{
     justify-content: flex-start;
     background-color:#68061D;
     margin-right: 60px;
-    padding: 50px 80px 90px 80px;
+    padding: 50px 110px 90px 80px;
 }
 
 .curiosidade2{
@@ -381,14 +381,14 @@ body{
     justify-content: flex-end;
     background-color:#68061D;
     margin-right: 60px;
-    padding: 50px 80px 90px 60px;
+    padding: 50px 40px 110px 40px;
 }
 
 .contato{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px 0px 30px 0px;
+    padding: 0px 0px 100px 0px;
 }
 
 .contato h1{
@@ -426,7 +426,6 @@ body{
 .contato button{
     border: none;
     padding: 7px;
-    border-radius: 3px;
     color: #F2F2F2;
     background-image: linear-gradient(to bottom right, #9E1B32);
 }

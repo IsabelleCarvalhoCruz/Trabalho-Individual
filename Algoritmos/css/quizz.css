@@ -69,6 +69,87 @@ body{
    font-size: 27px;
 }
 
+.quizzes{
+    display: flex;
+    flex-direction: row;
+}
+
+.quizz1{
+    background-color: whitesmoke;
+    margin: 80px;
+    padding: 10px;
+    align-items: center;
+    filter: drop-shadow(5px 4px 10px gray);
+}
+
+.quizz1 img{
+    height: 200px;
+    width: 300px;
+}
+
+.quizz1  h1{
+    margin-left: 30%;
+}
+
+.quizz1 button{
+    border: none;
+    background-color: #D34C52;
+    color: #F2F2F2;
+    padding: 5px;
+    margin-left: 30%;
+}
+
+
+.quizz2{
+    background-color: whitesmoke;
+    margin: 80px;
+    padding: 10px;
+    align-items: center;
+    filter: drop-shadow(5px 4px 10px gray);
+}
+
+.quizz2 img{
+    height: 200px;
+    width: 300px;
+}
+
+.quizz2 button{
+    border: none;
+    background-color: #D34C52;
+    color: #F2F2F2;
+    padding: 5px;
+    margin-left: 30%;
+}
+
+.quizz2  h1{
+    margin-left: 30%;
+}
+
+.quizz3{
+    background-color: whitesmoke;
+    margin: 80px;
+    padding: 10px;
+    align-items: center;
+    filter: drop-shadow(5px 4px 10px gray);
+}
+
+.quizz3 img{
+    height: 200px;
+    width: 300px;
+}
+
+.quizz3 button{
+    border: none;
+    background-color: #D34C52;
+    color: #F2F2F2;
+    padding: 5px;
+    margin-left: 30%;
+}
+
+.quizz3 h1{
+    margin-left: 30%;
+}
+
 .footer{
     display: flex;
     flex-direction: row;

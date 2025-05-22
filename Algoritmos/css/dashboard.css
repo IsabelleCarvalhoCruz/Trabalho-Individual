@@ -46,6 +46,15 @@ body{
     font-size: 26px;
 }
 
+
+.navbar-dashboard img{
+    height: 100px;
+    width: 160px;
+    filter: invert(100%);
+    margin-left: -20px;
+}
+
+
 .graficos{
     background-color:#F2F2F2;
     display: flex;
