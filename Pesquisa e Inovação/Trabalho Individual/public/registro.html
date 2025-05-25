@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/registro.css">
+    <title>Faça seu cadastro!</title>
+</head>
+<body>
+
+    <div class="container-registro">
+
+         <div class="imagem">
+        <img src="./imagens/ballet3.jpg">
+        </div>
+
+        <div class="registro">
+            <div class="cadastro"> 
+                   <a href="login.html">⬅ Voltar</a>
+                <h1>Faça seu cadastro!</h1>
+                <h2>Seja um membro da comunidade Fonteyn!</h2>
+            </div>
+
+            <div class="reg">
+                <h1>Cadastro</h1>
+                <h2>Nome:</h2>
+                <input type="text" class="nome" id="ipt_nome" placeholder="Nome">
+                <h2>Senha:</h2>
+                <input type="password" class="senha" id="ipt_senha" placeholder="Senha">
+                <h2>Email:</h2>
+                <input type="text" class="email" id="ipt_email" placeholder="Email">
+                <button onclick="cadastrar()"><a href="#">Cadastrar</a></button>
+            </div>
+
+        </div>
+    </div>
+   
+</body>
+</html>
+
+<script>
+
+  // Array para armazenar empresas cadastradas para validação de código de ativação 
+  let listaEmpresasCadastradas = [];
+
+  function cadastrar() {
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = ipt_nome.value;
+    var emailVar = ipt_email.value;
+    var senhaVar = ipt_senha.value;
+    // var confirmacaoSenhaVar = confirmacao_senha_input.value;
+    // var codigoVar = codigo_input.value;
+    // var cpfVar = cpf_input.value;
+    // var idEmpresaVincular;
+
+    // Verificando se há algum campo em branco
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" 
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "(Mensagem de erro para todos os campos em branco)";
+
+      // finalizarAguardar();
+      return false;
+    } else {
+      // setInterval(sumirMensagem, 5000);
+    }
+
+    // Verificando se o código de ativação é de alguma empresa cadastrada
+    // for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
+    //   if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
+    //     idEmpresaVincular = listaEmpresasCadastradas[i].id
+    //     console.log("Código de ativação válido.");
+    //     break;
+    //   } else {
+    //     cardErro.style.display = "block";
+    //     mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
+    //     finalizarAguardar();
+    //   }
+    // }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          // limparFormulario();
+          // finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      // .catch(function (resposta) {
+      //   console.log(`#ERRO: ${resposta}`);
+      //   // finalizarAguardar();
+      // });
+
+    return false;
+  }
+
+//   // Listando empresas cadastradas 
+//   function listar() {
+//     fetch("/empresas/listar", {
+//       method: "GET",
+//     })
+//       .then(function (resposta) {
+//         resposta.json().then((empresas) => {
+//           empresas.forEach((empresa) => {
+//             listaEmpresasCadastradas.push(empresa);
+
+//             console.log("listaEmpresasCadastradas")
+//             console.log(listaEmpresasCadastradas[0].codigo_ativacao)
+//           });
+//         });
+//       })
+//       .catch(function (resposta) {
+//         console.log(`#ERRO: ${resposta}`);
+//       });
+//   }
+
+//   function sumirMensagem() {
+//     cardErro.style.display = "none";
+//   }
+</script>
