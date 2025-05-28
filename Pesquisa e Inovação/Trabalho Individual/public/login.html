@@ -30,7 +30,7 @@
             <div class="links">
                 <a href="senha.html">Esqueceu a senha?</a>
             </div>
-            <button onclick="entrar()" class="botao"><a href="#">Entrar</a></button>
+            <button onclick="entrar()" class="botao">Entrar</button>
             <a href="registro.html">Não possui cadastro? Clique aqui</a>
         </div>
     </div>
@@ -43,7 +43,7 @@
 
 
     function entrar() {
-        aguardar();
+        // aguardar();
 
         var emailVar = ipt_email.value;
         var senhaVar = ipt_senha.value;
@@ -84,7 +84,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
 
-                    window.location = "dashboard.html";
+                    window.location.href = "dashboard.html";
 
                 });
 
