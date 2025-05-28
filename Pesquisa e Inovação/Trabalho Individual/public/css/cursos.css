@@ -55,7 +55,6 @@ body{
     background-color: whitesmoke;
     margin: 80px 240px 100px 330px;
     padding: 5px;
-    align-items: center;
     filter: drop-shadow(5px 4px 10px gray);
 }
 
@@ -64,8 +63,8 @@ body{
     width: 300px;
 }
 
-.curso1  h1{
-    margin-left: 30%;
+.curso1 h1{
+    font-size: 25px;
 }
 
 .curso1 button{
@@ -99,5 +98,5 @@ body{
 }
 
 .curso2  h1{
-    margin-left: 30%;
+    font-size: 25px;
 }

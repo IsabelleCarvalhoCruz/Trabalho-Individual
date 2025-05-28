@@ -22,11 +22,16 @@ body {
     color: var(--new-black);
     background-color: var(--new-white);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
     font-family: monospace;
     font-weight: bold;
+    color: #CCCCCC;
+    background-color: #0762C8;
 }
 
 .flex-colunar {
@@ -47,7 +52,11 @@ button {
 }
 
 .padding-8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 8px;
+    background-color:#0762C8;
 }
 
 .text-bold {

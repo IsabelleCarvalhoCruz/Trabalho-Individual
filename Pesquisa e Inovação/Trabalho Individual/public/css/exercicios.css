@@ -65,7 +65,7 @@ body{
 }
 
 .exercicio1  h1{
-    margin-left: 30%;
+    font-size: 25px;
 }
 
 .exercicio1 button{
@@ -99,5 +99,5 @@ body{
 }
 
 .exercicio2  h1{
-    margin-left: 30%;
+    font-size: 25px;
 }

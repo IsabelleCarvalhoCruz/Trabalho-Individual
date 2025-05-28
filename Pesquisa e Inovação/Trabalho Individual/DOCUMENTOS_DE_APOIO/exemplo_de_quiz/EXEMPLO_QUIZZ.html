@@ -11,7 +11,10 @@
 
 <body onload="onloadEsconder()">
     <div id="pontuacaoEJogo">
+        <div class="card-quizz">
+             <h1>INICIE O QUIZZ AQUI:</h1>
         <button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
+        </div>
 
         <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
             <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
@@ -73,7 +76,7 @@
 
 </html>
 <script>
-    const listaDeQuestoes = [
+    var listaDeQuestoes = [
 
         {
             pergunta: "Qual mês tem 30 dias?",
@@ -100,17 +103,80 @@
             alternativaC: "Oito",
             alternativaD: "Onze",
             alternativaCorreta: "alternativaD"
+        }, 
+
+         {
+            pergunta: "Qual destes números é ímpar?",
+            alternativaA: "Dez",
+            alternativaB: "Doze",
+            alternativaC: "Oito",
+            alternativaD: "Onze",
+            alternativaCorreta: "alternativaD"
+        },
+
+         {
+            pergunta: "Qual destes números é ímpar?",
+            alternativaA: "Dez",
+            alternativaB: "Doze",
+            alternativaC: "Oito",
+            alternativaD: "Onze",
+            alternativaCorreta: "alternativaD"
+        },
+
+         {
+            pergunta: "Qual destes números é ímpar?",
+            alternativaA: "Dez",
+            alternativaB: "Doze",
+            alternativaC: "Oito",
+            alternativaD: "Onze",
+            alternativaCorreta: "alternativaD"
+        },
+
+         {
+            pergunta: "Qual destes números é ímpar?",
+            alternativaA: "Dez",
+            alternativaB: "Doze",
+            alternativaC: "Oito",
+            alternativaD: "Onze",
+            alternativaCorreta: "alternativaD"
+        },
+
+         {
+            pergunta: "Qual destes números é ímpar?",
+            alternativaA: "Dez",
+            alternativaB: "Doze",
+            alternativaC: "Oito",
+            alternativaD: "Onze",
+            alternativaCorreta: "alternativaD"
+        },
+
+         {
+            pergunta: "Qual destes números é ímpar?",
+            alternativaA: "Dez",
+            alternativaB: "Doze",
+            alternativaC: "Oito",
+            alternativaD: "Onze",
+            alternativaCorreta: "alternativaD"
+        },
+
+         {
+            pergunta: "Qual destes números é ímpar?",
+            alternativaA: "Dez",
+            alternativaB: "Doze",
+            alternativaC: "Oito",
+            alternativaD: "Onze",
+            alternativaCorreta: "alternativaD"
         }
 
     ]
 
     // variáveis globais    
-    let numeroDaQuestaoAtual = 0
-    let pontuacaoFinal = 0
-    let tentativaIncorreta = 0
-    let certas = 0
-    let erradas = 0
-    let quantidadeDeQuestoes = listaDeQuestoes.length
+    var numeroDaQuestaoAtual = 0
+    var pontuacaoFinal = 0
+    var tentativaIncorreta = 0
+    var certas = 0
+    var erradas = 0
+    var quantidadeDeQuestoes = listaDeQuestoes.length
     // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
 
     function onloadEsconder() {
@@ -135,7 +201,7 @@
 
     function preencherHTMLcomQuestaoAtual(index) {
         habilitarAlternativas(true)
-        const questaoAtual = listaDeQuestoes[index]
+        var questaoAtual = listaDeQuestoes[index]
         numeroDaQuestaoAtual = index
         console.log("questaoAtual")
         console.log(questaoAtual)
