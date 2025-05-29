@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo - Quiz</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Exercicio 2</title>
+    <link rel="stylesheet" href="../css/exercicio2.css">
 </head>
 
 <div class="container-dashboard">
@@ -20,7 +20,8 @@
 
     </div>
 
-        <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
+        <div class="container">
+              <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
             <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
                 <span class="width-fit-content">Quantidade de acertos: <span id="spanCertas"></span></span>
                 <span class="width-fit-content">Quantidade de erros: <span id="spanErradas"></span></span>
@@ -77,6 +78,8 @@
         </div>
     </div>
 </div>
+        </div>
+      
 </body>
 
 </html>
@@ -184,25 +187,25 @@
     var quantidadeDeQuestoes = listaDeQuestoes.length
     // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
 
-    function onloadEsconder() {
-        document.getElementById('pontuacao').style.display = "none"
-        document.getElementById('jogo').style.display = "none"
-    }
+    // function onloadEsconder() {
+    //     document.getElementById('pontuacao').style.display = "none"
+    //     document.getElementById('jogo').style.display = "none"
+    // }
 
-    function iniciarQuiz() {
-        document.getElementById('pontuacao').style.display = "flex"
-        document.getElementById('jogo').style.display = "flex"
-        document.getElementById('btnIniciarQuiz').style.display = "none"
+    // function iniciarQuiz() {
+    //     document.getElementById('pontuacao').style.display = "flex"
+    //     document.getElementById('jogo').style.display = "flex"
+    //     document.getElementById('btnIniciarQuiz').style.display = "none"
 
-        document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
+    //     document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
 
-        preencherHTMLcomQuestaoAtual(0)
+    //     preencherHTMLcomQuestaoAtual(0)
 
-        btnSubmeter.disabled = false
-        btnProx.disabled = true
-        // btnConcluir.disabled = true
-        btnTentarNovamente.disabled = true
-    }
+    //     btnSubmeter.disabled = false
+    //     btnProx.disabled = true
+    //     // btnConcluir.disabled = true
+    //     btnTentarNovamente.disabled = true
+    // }
 
     function preencherHTMLcomQuestaoAtual(index) {
         habilitarAlternativas(true)
@@ -274,12 +277,12 @@
     }
 
     function checarResposta() {
-        const questaoAtual = listaDeQuestoes[numeroDaQuestaoAtual] // questão atual 
-        const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
+        var questaoAtual = listaDeQuestoes[numeroDaQuestaoAtual] // questão atual 
+        var respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
 
-        const options = document.getElementsByName("option"); // recupera alternativas no html
+        var options = document.getElementsByName("option"); // recupera alternativas no html
 
-        let alternativaCorreta = null // variável para armazenar a alternativa correta
+        var alternativaCorreta = null // variável para armazenar a alternativa correta
 
         options.forEach((option) => {
             if (option.value === respostaQuestaoAtual) {
