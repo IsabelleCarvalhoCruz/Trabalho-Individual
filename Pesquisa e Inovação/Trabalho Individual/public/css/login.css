@@ -80,7 +80,7 @@ body{
     margin: 15px 0px 15px 0px;
 }
 
-button:hover{
+.log a:hover{
 color: #68061D;
 }
 

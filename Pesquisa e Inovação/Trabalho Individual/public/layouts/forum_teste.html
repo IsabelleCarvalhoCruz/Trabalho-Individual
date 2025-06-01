@@ -1,69 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/forum.css">
-    <title>Forum</title>
-</head>
-<body>
+<body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
 
-    <div class="container-dashboard">
-    <div class="navbar-dashboard">
-        <!-- <img src="#"> -->
-        <h1>Seja Bem-vindo! </h1>
-        <a href="../dashboard.html" class="tsize">Inicio</a>
-        <a href="cursos.html" class="tsize">Cursos</a>
-        <a href="exercicios.html" class="tsize">Exercicios</a>
-        <a href="../index.html" class="tsize">Sair</a>
-    </div>
+    <div class="janela">
 
-    </div>
-    
-    <div class="forum">
-        <div class="titulo">
-            <div class="principal">
-                <h1>Forum</h1>
+
+        <div class="header-left">
+
+            <h1>AquaTech</h1>
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
-            <h3>Faça parte da nossa comunidade:</h3>
-            <div class="pesquisar">
-            <input type="text" id="ipt_pesquisar_forum">
-            <button onclick="PesquisarForum()">Pesquisar</button>
+
+            <div class="btn-nav-white">
+                <a href="cards.html">
+                    <h3>Aquários</h3>
+                </a>
             </div>
+
+            <div class="btn-nav-white">
+                <a href="./dashboard.html">
+                    <h3>Gráficos</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav">
+                <h3>Mural de Avisos</h3>
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
         </div>
-    </div>
 
-             
+        <div class="dash-right">
+
+
+            <div class="avisos">
+                <div id="alerta">
+                </div>
+                <div class="container">
+                    <h1>Publicar um aviso</h1>
                     <div class="div-form">
-                           <h1>Publicar um aviso</h1>
                         <form id="form_postagem" method="post" onsubmit="return publicar()">
                             <label>
-                                <h2>Título:</h2>
+                                Título:
                                 <br>
                                 <input name="titulo" id="titulo" maxlength="100" type="text">
                             </label>
                             <br>
                             <br>
-                        <label>
-                            <h2>Descrição (máximo de 250 caracteres):</h2>
+                            <label>
+                                Descrição (máximo de 250 caracteres):
+                                <br>
+                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                            </label>
                             <br>
-                            <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                        </label>
-
                             <br>
-                            <br>
-
                             <button>Enviar</button>
                         </form>
                     </div>
-
-                    <div class="mural">
-                          <h1>Mural de Avisos</h1>
+                    <h1>Mural de Avisos</h1>
                     <div class="div-results">
                         <div id="feed_container" class="feed-container">
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 </body>
+
 </html>
 
 <script>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 2</title>
+    <title>Exercicio 1</title>
     <link rel="stylesheet" href="../css/exercicio1.css">
 </head>
 
@@ -15,13 +15,23 @@
         <a href="../dashboard.html" class="tsize">Inicio</a>
         <a href="cursos.html" class="tsize">Cursos</a>
         <a href="exercicios.html" class="tsize">Exercicios</a>
+        <a href="forum.html" class="tsize">Forum</a>
         <a href="../index.html" class="tsize">Sair</a>
     </div>
 
     </div>
 
+<body onload="onloadEsconder()">
+    <div id="pontuacaoEJogo">
+        <div class="card-quizz" id="card-quizz">
+             <h1>INICIE O TESTE AQUI:</h1>
+        <button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR</button>
+        </div>
+
        <div class="container">
-         <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
+
+        <div class="conteudo1">
+            <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
             <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
                 <span class="width-fit-content">Quantidade de acertos: <span id="spanCertas"></span></span>
                 <span class="width-fit-content">Quantidade de erros: <span id="spanErradas"></span></span>
@@ -33,8 +43,12 @@
                 <span id="msgFinal" class="width-fit-content">***</span>
             </div>
         </div>
+    </div>
+         
 
-        <div id="jogo" class="width-fit-content flex-colunar border-secondary">
+
+    <div class="conteudo2">
+         <div id="jogo" class="width-fit-content flex-colunar border-secondary">
 
             <div id="infoQuestao" class="padding-8">
                 <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>
@@ -76,9 +90,13 @@
             </div>
 
         </div>
+
+        </div>
     </div>
+    </div>
+       
 </div>
-       </div>
+
 </body>
 
 </html>
@@ -189,12 +207,14 @@
     function onloadEsconder() {
         document.getElementById('pontuacao').style.display = "none"
         document.getElementById('jogo').style.display = "none"
+        document.getElementById('card-quizz').style.display = "block"
     }
 
     function iniciarQuiz() {
         document.getElementById('pontuacao').style.display = "flex"
         document.getElementById('jogo').style.display = "flex"
         document.getElementById('btnIniciarQuiz').style.display = "none"
+        document.getElementById('card-quizz').style.display = "none"
 
         document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
 

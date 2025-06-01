@@ -25,7 +25,7 @@ body{
     /* background-color:#eaa9d6; */
     background-image: linear-gradient(to bottom right, #9E1B32);
     font-size: 25px;
-    padding: 7px 60px 7px 9px;
+    padding: 7px 150px 7px 97px;
 }
 
 .navbar a, .navbar p{
@@ -72,11 +72,12 @@ body{
 .blog{
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .topico1{
     background-color: whitesmoke;
-    margin: 80px;
+    margin: 80px 80px 80px 40px;
     padding: 10px;
     align-items: center;
     filter: drop-shadow(5px 4px 10px gray);
@@ -88,7 +89,8 @@ body{
 }
 
 .topico1  h1{
-    margin-left: 30%;
+    text-align: center;
+    font-size: 20px;
 }
 
 .topico1 button{
@@ -97,6 +99,12 @@ body{
     color: #F2F2F2;
     padding: 5px;
     margin-left: 30%;
+}
+
+
+.topico1 a{
+    text-decoration: none;
+    color: #F2F2F2;
 }
 
 
@@ -122,7 +130,14 @@ body{
 }
 
 .topico2  h1{
-    margin-left: 30%;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.topico2 a{
+    text-decoration: none;
+    color: #F2F2F2;
 }
 
 .topico3{
@@ -147,7 +162,27 @@ body{
 }
 
 .topico3 h1{
-    margin-left: 30%;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.topico3 a{
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+
+.topico1 a:hover {
+    color: #9E1B32;
+}
+
+.topico2 a:hover {
+    color: #9E1B32;
+}
+
+.topico3 a:hover {
+    color: #9E1B32;
 }
 
 .footer{

@@ -51,6 +51,15 @@ body{
     flex-direction: row;
 }
 
+.cursos a{
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+.cursos a:hover{
+    color: #9E1B32;
+}
+
 .curso1{
     background-color: whitesmoke;
     margin: 80px 240px 100px 330px;

@@ -25,7 +25,7 @@ body{
     /* background-color:#eaa9d6; */
     background-image: linear-gradient(to bottom right, #9E1B32);
     font-size: 25px;
-    padding: 7px 60px 7px 9px;
+    padding: 7px 150px 7px 98px;
 }
 
 .navbar a, .navbar p{
@@ -147,6 +147,12 @@ body{
     background-color:#F2F2F2;
     color: black;
     padding: 100px 100px 200px 200px;
+}
+
+.imagem img{
+    height: 400px;
+    width: 700px;
+    filter: grayscale(100%);
 }
 
 .footer{

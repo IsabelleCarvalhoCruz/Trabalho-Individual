@@ -51,6 +51,15 @@ body{
     flex-direction: row;
 }
 
+.exercicios a{
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+.exercicios a:hover{
+    color: #9E1B32;
+}
+
 .exercicio1{
     background-color: whitesmoke;
     margin: 80px 240px 100px 330px;
