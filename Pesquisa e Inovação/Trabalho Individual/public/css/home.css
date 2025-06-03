@@ -65,6 +65,10 @@ body{
     padding: 2px;
 }
 
+.search:focus{
+    outline-color: #D34C52;
+}
+
 .navbar a:hover {
    color: #D34C52;
    font-size: 26px;
@@ -320,21 +324,21 @@ body{
 .butao3{
     z-index: 2;
     position: absolute;
-    margin: 100px 0px 0px -90px;
+    margin: 90px 0px 0px -10px;
 }
 
 
 .butao4{
     z-index: 2;
     position: absolute;
-    margin: 70px 0px 0px -150px;
+    margin: 160px 0px 0px 20px;
 }
 
 
 .butao5{
     z-index: 2;
     position: absolute;
-    margin: 100px 0px 0px -160px;
+    margin: 90px 60px 0px 0px;
 }
 
 .curiosidades{
@@ -427,6 +431,10 @@ body{
     padding: 7px;
     color: #F2F2F2;
     background-image: linear-gradient(to bottom right, #9E1B32);
+}
+
+.contato input:hover{
+    outline-color: #D34C52;
 }
 
 .footer{

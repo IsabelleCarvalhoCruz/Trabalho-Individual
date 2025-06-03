@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Blog</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
             <a href="../login.html" class="tsize">Login</a>
             <p>Pesquisa:</p>
             <input type="text" class="search" aria-hidden="true">
-            <button onclick="Pesquisar()" class="butao1">OK</button>
+            <button onclick="pesquisar()" class="butao1">OK</button>
     </div>
 
         <div class="blog">
@@ -70,3 +71,38 @@
 
 </body>
 </html>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js">
+
+</script>
+
+<script>
+function pesquisar(){
+   var pesquisa = ipt_pesquisa.value;
+
+    if (pesquisa == ''){
+        Toastify({
+      text: "Preencha todos os campos!",
+      duration: 3000,
+      style: {
+      background: "linear-gradient(to right, #FF8C00, #FF4500)",
+        },
+      }).showToast();
+    } else if (pesquisa == 'ballet'){
+        window.location.href = './html/blog.html'
+    } else if (pesquisa == 'variação'){
+        window.location.href = './html/blog.html'
+    } else if (pesquisa == 'sobre'){
+        window.location.href = './html/sobre.html'
+    } else{
+        Toastify({
+      text: "Pesquisa não identificada!",
+      duration: 3000,
+      style: {
+      background: "linear-gradient(to right, #FF8C00, #FF4500)",
+        },
+      }).showToast();
+    }
+}
+</script>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../css/sobre.css">
     <title>Sobre</title>
 </head>
@@ -20,23 +21,29 @@
             <a href="../login.html" class="tsize">Login</a>
             <p>Pesquisa:</p>
             <input type="text" class="search" aria-hidden="true">
-            <button onclick="Pesquisar()" class="butao1">OK</button>
+            <button onclick="pesquisar()" class="butao1">OK</button>
         </div>
 
         <div class="sobre">
             <div class="topo"></div>
-            <img src="../imagens/ballet1.jpg">
+            <img src="../imagens/ballet3.jpg">
         </div>
 
         <div class="conteudo1">
             <div class="titulo1">
-                <h1>Sobre nós:</h1>
+                <h1>Variações de Repertório</h1>
+                <br>
                  <div class="texto1">
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique molestiae neque nesciunt ad quidem dolore sed facilis distinctio nemo, id ullam corporis pariatur voluptatum minus quisquam itaque, nam, nostrum est.</h2>
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime excepturi voluptatibus, in perspiciatis molestiae alias incidunt officia accusantium sunt consequatur tempore ullam, assumenda nesciunt repudiandae ea mollitia delectus fugiat necessitatibus!</h2>
                 </div>
             </div>
         </div>
+
+           <div class="imagem">
+            <img src="../imagens/balletHD4.jpg">
+        </div>
+
 
         <div class="conteudo3">
                  <div class="texto1">
@@ -53,3 +60,37 @@
 
 </body>
 </html>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js">
+
+</script>
+
+<script>
+function pesquisar(){
+   var pesquisa = ipt_pesquisa.value;
+
+    if (pesquisa == ''){
+        Toastify({
+      text: "Preencha todos os campos!",
+      duration: 3000,
+      style: {
+      background: "linear-gradient(to right, #FF8C00, #FF4500)",
+        },
+      }).showToast();
+    } else if (pesquisa == 'ballet'){
+        window.location.href = './html/blog.html'
+    } else if (pesquisa == 'variação'){
+        window.location.href = './html/blog.html'
+    } else if (pesquisa == 'sobre'){
+        window.location.href = './html/sobre.html'
+    } else{
+        Toastify({
+      text: "Pesquisa não identificada!",
+      duration: 3000,
+      style: {
+      background: "linear-gradient(to right, #FF8C00, #FF4500)",
+        },
+      }).showToast();
+    }
+}
+</script>

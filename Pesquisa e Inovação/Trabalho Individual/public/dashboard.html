@@ -7,8 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
     <title>Inicio</title>
 </head>
-<body>
-
 <div class="container-dashboard">
     <div class="navbar-dashboard">
         <!-- <img src="#"> -->
@@ -20,35 +18,45 @@
         <a href="index.html" class="tsize">Sair</a>
     </div>
 
+    <body onload="obterDados()"></body>
     <div class="graficos">
-        <div class="title">
-        <h1>Sua evolução:</h1> 
-        </div>
 
-        <div class="bloco1">
-            <h1>Feitos</h1>
-            <h2>3</h2>
+
+        <div class="kpis">
+
+             <div class="kpi">
+         <div class="bloco1">
+            <h1>Pontuação Máxima:</h1>
+            <div id="mensagem1"></div>
         </div>
 
         <div class="bloco2">
-            <h1>Não Feitos</h1>
-            <h2>2</h2>
+            <h1>Tempo Mínimo:</h1>
+            <div id="mensagem2"></div>
         </div>
 
-        <div class="grafico1">
+        </div>
+
+        <div class="kpi2">
+        <div class="grafico2">
+            <h1>Relatório de atividades:</h1>
+            <canvas id="Grafico2" class="grafico-pizza"></canvas>
+        </div>
+        </div>
+
+        </div>
+
+        <div class="graficos-desempenho">
+              <div class="grafico1">
             <h1>Relatório de desempenho:</h1>
             <canvas id="Grafico1" class="grafico-barra"></canvas>
         </div>
 
-        <div class="grafico2">
-            <h1>Relatório de atividades:</h1>
-            <canvas id="Grafico2" class="grafico-pizza"></canvas>
-            <br>
-            <h1>Notificações</h1>
-            <h3>Você tem atividades pendentes!</h3>
-            <h3>Você tem atividades pendentes!</h3>
-            <h3>Você tem atividades pendentes!</h3>
-            <h3>Você tem atividades pendentes!</h3>
+         <div class="grafico3">
+            <h1>Relatório de desempenho:</h1>
+            <canvas id="Grafico3" class="grafico-linhas"></canvas>
+        </div>
+
         </div>
     </div>
 </div>
@@ -60,20 +68,20 @@
 
 var Grafico1 = document.getElementById('Grafico1');
 var Grafico2 = document.getElementById('Grafico2');
+var Grafico3 = document.getElementById('Grafico3');
 
 
     Grafico1 = new Chart(Grafico1, {
     type: 'bar',
     data: {
-        labels: ['Sua Nota', 'Nota Média','Sua Nota', 'Nota Média','Sua Nota', 'Nota Média',
-        'Sua Nota', 'Nota Média'],
+        labels: ['Sua Nota', 'Nota Média'],
         datasets: [{
             label: 'Seu desempenho',
-            data: [7, 8, 8.5, 8, 6, 8, 4.5, 8],
+            data: [7, 8],
             backgroundColor: ['#cc4a48', '#68061D'],
             borderColor: ['#cc4a48', '#68061D'],
             borderWidth: 1,
-            barThickness: 50,
+            barThickness: 30,
         }]
     },
     options: {
@@ -113,10 +121,44 @@ var Grafico2 = document.getElementById('Grafico2');
                 display: true,
                 labels: {
                                 font: {
-                                    size: 15
+                                    size: 10
                                 }
                             }
                 
+            }
+        }
+    }
+});
+
+
+    Grafico3 = new Chart(Grafico3, {
+    type: 'line',
+    data: {
+        labels: ['Sua Nota', 'Nota Média'],
+        datasets: [{
+            label: 'Seu desempenho',
+            data: [7, 8],
+            backgroundColor: ['#68061D'],
+            borderColor: ['#68061D'],
+            borderWidth: 1,
+            barThickness: 100,
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true,
+                labels: {
+                        font: {
+                        size: 10
+                        }
+                    }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true
             }
         }
     }

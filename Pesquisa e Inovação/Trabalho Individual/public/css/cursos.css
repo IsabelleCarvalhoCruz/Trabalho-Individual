@@ -63,7 +63,8 @@ body{
 .curso1{
     background-color: whitesmoke;
     margin: 80px 240px 100px 330px;
-    padding: 5px;
+    padding: 10px 10px 30px 10px;
+    border: 1px solid #9E1B32;
     filter: drop-shadow(5px 4px 10px gray);
 }
 
@@ -81,14 +82,16 @@ body{
     background-color: #D34C52;
     color: #F2F2F2;
     padding: 5px;
-    margin-left: 30%;
+    margin-top: 10px;
+    margin-left: 33%;
 }
 
 
 .curso2{
     background-color: whitesmoke;
     margin: 80px 240px 100px 20px;
-    padding: 5px;
+    border: 1px solid #9E1B32;
+    padding: 10px 10px 30px 10px;
     align-items: center;
     filter: drop-shadow(5px 4px 10px gray);
 }
@@ -103,7 +106,8 @@ body{
     background-color: #D34C52;
     color: #F2F2F2;
     padding: 5px;
-    margin-left: 30%;
+    margin-top: 10px;
+    margin-left: 33%;
 }
 
 .curso2  h1{

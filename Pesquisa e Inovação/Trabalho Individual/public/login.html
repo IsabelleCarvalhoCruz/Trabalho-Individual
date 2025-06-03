@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Faça seu login!</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
             <div class="links">
                 <a href="senha.html">Esqueceu a senha?</a>
             </div>
-            <button onclick="entrar()" class="botao"><a href="dashboard.html">Entrar</a></button>
+            <button onclick="entrar()" class="botao"><a href="#">Entrar</a></button>
             <a href="registro.html">Não possui cadastro? Clique aqui</a>
         </div>
     </div>
@@ -39,23 +40,52 @@
 </body>
 </html>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js">
+
+</script>
+
 <script>
-
-
     function entrar() {
-        // aguardar();
 
         var emailVar = ipt_email.value;
         var senhaVar = ipt_senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            // finalizarAguardar();
-            // return false;
+             Toastify({
+            text: "Preencha todos os campos para prosseguir!",
+            duration: 3000,
+            style: {
+            background: "linear-gradient(to right, #FF8C00, #FF4500)",
+                },
+            }).showToast();
         }
-        else {
-            // setInterval(sumirMensagem, 5000)
+        else if(emailVar =!(emailVar.includes('@')) && (emailVar =!(emailVar.includes('.')))){
+             Toastify({
+            text: "Por-favor adicionar um endereço de email válido!",
+            duration: 3000,
+            style: {
+            background: "linear-gradient(to right, #FF8C00, #FF4500)",
+                    },
+             }).showToast();
+        } else if(senhaVar <= 7){
+               Toastify({
+            text: "Por-favor adicionar uma senha válida!",
+            duration: 3000,
+            style: {
+            background: "linear-gradient(to right, #FF8C00, #FF4500)",
+                    },
+             }).showToast();
+        } else if (senhaVar =!(senhaVar.includes('@')) && (senhaVar =!(senhaVar.includes('$'))) 
+        && (senhaVar =!(senhaVar.includes('!'))) && (senhaVar =!(senhaVar.includes('#')))){
+                Toastify({
+            text: "Por-favor adicionar uma senha válida!",
+            duration: 3000,
+            style: {
+            background: "linear-gradient(to right, #FF8C00, #FF4500)",
+                    },
+             }).showToast();
+        } else {
+
         }
 
         console.log("FORM LOGIN: ", emailVar);
@@ -83,8 +113,19 @@
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
 
+                     Toastify({
+                    text: "Credenciais verificadas! Direcionando para a outra página...",
+                    duration: 3000,
+                    style: {
+                    background: "linear-gradient(to right, #67CB57, #90EE90)",
+                         },
+                     }).showToast();
 
+
+                var intervalo = setInterval(()=>{
                     window.location.href = "dashboard.html";
+                },3000); 
+                   
 
                 });
 
@@ -92,9 +133,16 @@
 
                 console.log("Houve um erro ao tentar realizar o login!");
 
+                 Toastify({
+                text: "Houve um erro ao tentar realizar o login!",
+                duration: 3000,
+                style: {
+                background: "linear-gradient(to right, #FF8C00, #FF4500)",
+        },
+      }).showToast();
+
                 resposta.text().then(texto => {
                     console.error(texto);
-                    // finalizarAguardar(texto);
                 });
             }
 
@@ -104,9 +152,5 @@
 
         return false;
     }
-
-    // function sumirMensagem() {
-    //     cardErro.style.display = "none"
-    // }
 
 </script>

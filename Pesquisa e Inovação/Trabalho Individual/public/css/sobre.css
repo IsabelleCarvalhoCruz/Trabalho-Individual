@@ -69,6 +69,10 @@ body{
    font-size: 26px;
 }
 
+.search:focus{
+    outline-color: #D34C52;
+}
+
 .topo{
     background-image: linear-gradient(to bottom right, #9E1B32);
     padding: 200px 678px 200px 678px;
@@ -76,11 +80,11 @@ body{
 
 .sobre img{
     top: 0;
-    height: 350px;
-    width: 450px;
+    height: 400;
+    width: 600px;
     position: absolute;
-    transform: translateY(90%);
-    margin-left: 450px;
+    transform: translateY(60%);
+    margin-left: 370px;
     filter: grayscale(100%);
 }
 
@@ -90,7 +94,7 @@ body{
 }
 
 .conteudo1 h1{
-    margin-left: 350px;
+    text-align: center;
     position: relative;
     color: black;
     z-index: 2;
