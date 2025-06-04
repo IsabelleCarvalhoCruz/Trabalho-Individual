@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 1</title>
-    <link rel="stylesheet" href="../css/exercicio1.css">
+    <link rel="stylesheet" href="../css/quizz.css">
+    <title>Document</title>
 </head>
+<body>
 
-<div class="container-dashboard">
+    <div class="container-dashboard">
     <div class="navbar-dashboard">
-        <!-- <img src="#"> -->
         <h1>Seja Bem-vindo! </h1>
         <a href="../dashboard.html" class="tsize">Inicio</a>
         <a href="cursos.html" class="tsize">Cursos</a>
@@ -22,361 +21,236 @@
     </div>
 
 <body onload="onloadEsconder()">
-    <div id="pontuacaoEJogo">
-        <div class="card-quizz" id="card-quizz">
-             <h1>INICIE O TESTE AQUI:</h1>
-        <button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR</button>
+      <div id="pontuacaoEJogo">
+        <div class="card-quizz">
+             <h1>Iniciar quizz?</h1>
+        <button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
         </div>
+      </div>
+    
 
-       <div class="container">
-
-        <div class="conteudo1">
-            <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
-            <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
-                <span class="width-fit-content">Quantidade de acertos: <span id="spanCertas"></span></span>
-                <span class="width-fit-content">Quantidade de erros: <span id="spanErradas"></span></span>
+    <div class="app" id="pontuacao">
+        <h1>Quizz</h1>
+        <div class="quiz">
+            <h2 id="question">Question</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
             </div>
-            <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
-                <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final:
-                    <span id="spanPontuacaoFinal">***</span>
-                </span>
-                <span id="msgFinal" class="width-fit-content">***</span>
-            </div>
-        </div>
-    </div>
-         
-
-
-    <div class="conteudo2">
-         <div id="jogo" class="width-fit-content flex-colunar border-secondary">
-
-            <div id="infoQuestao" class="padding-8">
-                <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>
-                    questões.</span>
-            </div>
-
-            <div id="perguntaDaQuestaoAtual" class="padding-8">
-                <span id="spanQuestaoExibida" class="text-bold"></span>
-            </div>
-
-            <div id="infoAlternativas" class="padding-8">
-                <span><em>Escolha uma opção dentre as abaixo:</em></span>
-            </div>
-
-            <div id="opcoes" class="flex-colunar padding-8">
-                <span>
-                    <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
-                    <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
-                </span>
-                <span>
-                    <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
-                    <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
-                </span>
-                <span>
-                    <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
-                    <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
-                </span>
-                <span>
-                    <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
-                    <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
-                </span>
-            </div>
-
-            <div id="botoes" class="flex-colunar padding-8">
-                <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>
-                <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</button>
-                <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
-                <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar novamente</button>
-            </div>
-
-        </div>
-
+            <button id="next-btn">Next</button>
         </div>
     </div>
-    </div>
-       
-</div>
 
 </body>
-
 </html>
+
 <script>
-    var listaDeQuestoes = [
 
-        {
-            pergunta: "Qual mês tem 30 dias?",
-            alternativaA: "Janeiro",
-            alternativaB: "Dezembro",
-            alternativaC: "Junho",
-            alternativaD: "Agosto",
-            alternativaCorreta: "alternativaC"
-        },
+    const questions = [
+    {
+        question: "Qual é o passo correto entre esses?",
+        answers: [
+            {id: 1, text:"Plié", correct:true},
+            {id: 2, text:"Pular", correct:false},
+            {id: 3, text:"Voar", correct:false},
+            {id: 4, text:"Dançar", correct:false}
+        ]
+    },
 
-        {
-            pergunta: "Quantas horas tem em um dia?",
-            alternativaA: "30 horas",
-            alternativaB: "38 horas",
-            alternativaC: "48 horas",
-            alternativaD: "24 horas",
-            alternativaCorreta: "alternativaD"
-        },
+     {
+        question: "Qual é o passo correto entre esses?",
+        answers: [
+            {id: 1, text:"Plié", correct:true},
+            {id: 2, text:"Pular", correct:false},
+            {id: 3, text:"Voar", correct:false},
+            {id: 4, text:"Dançar", correct:false}
+        ]
+    },
 
-        {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
-        }, 
+     {
+        question: "Qual é o passo correto entre esses?",
+        answers: [
+            {id: 1, text:"Plié", correct:true},
+            {id: 2, text:"Pular", correct:false},
+            {id: 3, text:"Voar", correct:false},
+            {id: 4, text:"Dançar", correct:false}
+        ]
+    },
 
-         {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
-        },
+     {
+        question: "Qual é o passo correto entre esses?",
+        answers: [
+            {id: 1, text:"Plié", correct:true},
+            {id: 2, text:"Pular", correct:false},
+            {id: 3, text:"Voar", correct:false},
+            {id: 4, text:"Dançar", correct:false}
+        ]
+    },
 
-         {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
-        },
+     {
+        question: "Qual é o passo correto entre esses?",
+        answers: [
+            {id: 1, text:"Plié", correct:true},
+            {id: 2, text:"Pular", correct:false},
+            {id: 3, text:"Voar", correct:false},
+            {id: 4, text:"Dançar", correct:false}
+        ]
+    },
 
-         {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
-        },
+     {
+        question: "Qual é o passo correto entre esses?",
+        answers: [
+            {id: 1, text:"Plié", correct:true},
+            {id: 2, text:"Pular", correct:false},
+            {id: 3, text:"Voar", correct:false},
+            {id: 4, text:"Dançar", correct:false}
+        ]
+    },
 
-         {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
-        },
+     {
+        question: "Qual é o passo correto entre esses?",
+        answers: [
+            {id: 1, text:"Plié", correct:true},
+            {id: 2, text:"Pular", correct:false},
+            {id: 3, text:"Voar", correct:false},
+            {id: 4, text:"Dançar", correct:false}
+        ]
+    },
 
-         {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
-        },
+     {
+        question: "Qual é o passo correto entre esses?",
+        answers: [
+            {id: 1, text:"Plié", correct:true},
+            {id: 2, text:"Pular", correct:false},
+            {id: 3, text:"Voar", correct:false},
+            {id: 4, text:"Dançar", correct:false}
+        ]
+    },
 
-         {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
-        },
+     {
+        question: "Qual é o passo correto entre esses?",
+        answers: [
+            {id: 1, text:"Plié", correct:true},
+            {id: 2, text:"Pular", correct:false},
+            {id: 3, text:"Voar", correct:false},
+            {id: 4, text:"Dançar", correct:false}
+        ]
+    },
 
-         {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
-        }
+     {
+        question: "Qual é o passo correto entre esses?",
+        answers: [
+            {id: 1, text:"Plié", correct:true},
+            {id: 2, text:"Pular", correct:false},
+            {id: 3, text:"Voar", correct:false},
+            {id: 4, text:"Dançar", correct:false}
+        ]
+    }
+    
+];
 
-    ]
+const questionElement = document.getElementById('question');
+const answerButtons = document.getElementById('answer-buttons');
+const nextButton = document.getElementById('next-btn');
 
-    // variáveis globais    
-    var numeroDaQuestaoAtual = 0
-    var pontuacaoFinal = 0
-    var tentativaIncorreta = 0
-    var certas = 0
-    var erradas = 0
-    var quantidadeDeQuestoes = listaDeQuestoes.length
-    // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
+let currentQuestionIndex = 0;
+let score = 0;
 
-    function onloadEsconder() {
-        document.getElementById('pontuacao').style.display = "none"
-        document.getElementById('jogo').style.display = "none"
-        document.getElementById('card-quizz').style.display = "block"
+function onloadEsconder() {
+    document.getElementById('pontuacao').style.display = "none";
+}
+
+function iniciarQuiz(){
+    document.getElementById('pontuacao').style.display = "block";
+    document.getElementById('btnIniciarQuiz').style.display = "none";
+    document.getElementById('pontuacaoEJogo').style.display = "none";
+}
+
+
+function startQuiz(){
+    currentQuestionIndex = 0;
+    score = 0;
+
+    nextButton.innerHTML = "Próxima";
+    showQuestion();
+}
+
+function resetState(){
+    nextButton.style.display = "none";
+
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+
+function showQuestion(){
+    resetState();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    for (let i = 0; i <currentQuestion.answers.length; i++){
+        let answer = currentQuestion.answers[i];
+
+
+        const button = document.createElement('button');
+        button.innerHTML = answer.text;
+        button.dataset.id = answer.id;
+        button.addEventListener('click', selectAnswer);
+        button.classList.add('btn');
+        answerButtons.appendChild(button);
+    }
+    
+}
+
+function selectAnswer(e){
+    answers = questions[currentQuestionIndex].answers;
+    const correctAnswer = answers.filter((answer) => answer.correct == true)[0];
+
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.id == correctAnswer.id;
+
+    if(isCorrect){
+        selectedBtn.classList.add("correct")
+        score++;
+    } else{
+        selectedBtn.classList.add("incorrect")
     }
 
-    function iniciarQuiz() {
-        document.getElementById('pontuacao').style.display = "flex"
-        document.getElementById('jogo').style.display = "flex"
-        document.getElementById('btnIniciarQuiz').style.display = "none"
-        document.getElementById('card-quizz').style.display = "none"
+    Array.from(answerButtons.children).forEach((button) => {
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
+}
 
-        document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`
+    nextButton.innerHTML = "Jogar de novo"
+    nextButton.style.display = "block"
+}
 
-        preencherHTMLcomQuestaoAtual(0)
+function handleNextButtton(){
+    currentQuestionIndex++;
 
-        btnSubmeter.disabled = false
-        btnProx.disabled = true
-        // btnConcluir.disabled = true
-        btnTentarNovamente.disabled = true
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    } else{
+        showScore();
     }
+}
 
-    function preencherHTMLcomQuestaoAtual(index) {
-        habilitarAlternativas(true)
-        var questaoAtual = listaDeQuestoes[index]
-        numeroDaQuestaoAtual = index
-        console.log("questaoAtual")
-        console.log(questaoAtual)
-        document.getElementById("spanNumeroDaQuestaoAtual").innerHTML = Number(index) + 1 // ajustando porque o index começa em 0
-        document.getElementById("spanQuestaoExibida").innerHTML = questaoAtual.pergunta;
-        document.getElementById("labelOpcaoUm").innerHTML = questaoAtual.alternativaA;
-        document.getElementById("labelOpcaoDois").innerHTML = questaoAtual.alternativaB;
-        document.getElementById("labelOpcaoTres").innerHTML = questaoAtual.alternativaC;
-        document.getElementById("labelOpcaoQuatro").innerHTML = questaoAtual.alternativaD;
+nextButton.addEventListener("click", () =>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButtton();
+    } else{
+        startQuiz();
     }
+})
 
-    function submeter() {
-        const options = document.getElementsByName("option"); // recupera alternativas no html
-
-        let hasChecked = false
-        for (let i = 0; i < options.length; i++) {
-            if (options[i].checked) {
-                hasChecked = true
-                break
-            }
-        }
-
-        if (!hasChecked) {
-            alert("Não há alternativas escolhidas. Escolha uma opção.")
-        } else {
-            btnSubmeter.disabled = true
-            btnProx.disabled = false
-
-            habilitarAlternativas(false)
-
-            checarResposta()
-        }
-    }
-
-    function habilitarAlternativas(trueOrFalse) {
-        let opcaoEscolhida = trueOrFalse ? false : true
-
-        primeiraOpcao.disabled = opcaoEscolhida
-        segundaOpcao.disabled = opcaoEscolhida
-        terceiraOpcao.disabled = opcaoEscolhida
-        quartaOpcao.disabled = opcaoEscolhida
-
-    }
-
-    function avancar() {
-        btnProx.disabled = true
-        btnSubmeter.disabled = false
-
-        desmarcarRadioButtons()
-
-        if (numeroDaQuestaoAtual < quantidadeDeQuestoes - 1) {
-            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
-        } else if (numeroDaQuestaoAtual == quantidadeDeQuestoes - 1) {
-            alert("Atenção... a próxima é a ultima questão!")
-            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
-        } else {
-            finalizarJogo()
-        }
-        limparCoresBackgroundOpcoes()
-    }
-
-    function tentarNovamente() {
-        // atualiza a página
-        window.location.reload()
-    }
-
-    function checarResposta() {
-        const questaoAtual = listaDeQuestoes[numeroDaQuestaoAtual] // questão atual 
-        const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
-
-        const options = document.getElementsByName("option"); // recupera alternativas no html
-
-        let alternativaCorreta = null // variável para armazenar a alternativa correta
-
-        options.forEach((option) => {
-            if (option.value === respostaQuestaoAtual) {
-                console.log("alternativaCorreta está no componente: " + alternativaCorreta)
-                alternativaCorreta = option.labels[0].id
-            }
-        })
-
-        // verifica se resposta assinalada é correta
-        options.forEach((option) => {
-            if (option.checked === true && option.value === respostaQuestaoAtual) {
-                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
-                pontuacaoFinal++
-                certas++
-                document.getElementById("spanCertas").innerHTML = certas
-                numeroDaQuestaoAtual++
-            } else if (option.checked && option.value !== respostaQuestaoAtual) {
-                const wrongLabelId = option.labels[0].id
-
-                document.getElementById(wrongLabelId).classList.add("text-danger-with-bg")
-                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
-                tentativaIncorreta++
-                erradas++
-                document.getElementById("spanErradas").innerHTML = erradas
-                numeroDaQuestaoAtual++
-            }
-        })
-    }
-
-    function limparCoresBackgroundOpcoes() {
-        const options = document.getElementsByName("option");
-        options.forEach((option) => {
-            document.getElementById(option.labels[0].id).classList.remove("text-danger-with-bg")
-            document.getElementById(option.labels[0].id).classList.remove("text-success-with-bg")
-        })
-    }
-
-    function desmarcarRadioButtons() {
-        const options = document.getElementsByName("option");
-        for (let i = 0; i < options.length; i++) {
-            options[i].checked = false;
-        }
-    }
-
-    function finalizarJogo() {
-        let textoParaMensagemFinal = null
-        let classComCoresParaMensagemFinal = null
-        const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoes
-
-        if (porcentagemFinalDeAcertos <= 0.3) {
-            textoParaMensagemFinal = "Parece que você não estudou..."
-            classComCoresParaMensagemFinal = "text-danger-with-bg"
-        }
-        else if (porcentagemFinalDeAcertos > 0.3 && porcentagemFinalDeAcertos < 0.9) {
-            textoParaMensagemFinal = "Pode melhorar na próxima, hein!"
-            classComCoresParaMensagemFinal = "text-warning-with-bg"
-        }
-        else if (porcentagemFinalDeAcertos >= 0.9) {
-            textoParaMensagemFinal = "Uau, parabéns!"
-            classComCoresParaMensagemFinal = "text-success-with-bg"
-        }
-
-        textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos)*100) + "% das questões."
+startQuiz();
 
 
-        document.getElementById('msgFinal').innerHTML = textoParaMensagemFinal
-        document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal) 
-        document.getElementById('spanPontuacaoFinal').innerHTML = pontuacaoFinal
-
-        document.getElementById('jogo').classList.add("text-new-gray") 
-
-        btnProx.disabled = true
-        btnSubmeter.disabled = true
-        // btnConcluir.disabled = true
-        btnTentarNovamente.disabled = false
-
-    }
 </script>
