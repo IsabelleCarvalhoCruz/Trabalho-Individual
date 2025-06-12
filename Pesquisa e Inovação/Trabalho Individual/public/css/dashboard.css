@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 body{
     overflow: hidden;
     height: 100%;
@@ -11,14 +13,14 @@ body{
 .container-dashboard{
     height: 100%;
     width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color:#F2F2F2;
+    font-family: "Lora", serif;
+    background-color: #F2F2F2;
 }
 
 .navbar-dashboard{
     position: fixed;
     z-index: 0;
-    background-image: linear-gradient(to top right,#9E1B32, #D34C52);
+    background-image: linear-gradient(to top right, #7b0000, #D34C52);
     font-weight: bolder;
     font-size: 20px;
     display: flex;
@@ -132,6 +134,7 @@ body{
 
 
 .grafico3{
+    text-align: center;
     background-color: #F2F2F2;
     border: 1px solid #9E1B32;
     margin-top: 5px;
@@ -141,6 +144,7 @@ body{
 }
 
 .grafico2{
+    text-align: center;
     background-color: #F2F2F2;
     border: 1px solid #9E1B32;
     padding: 20px 40px 60px 40px;

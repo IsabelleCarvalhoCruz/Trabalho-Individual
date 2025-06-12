@@ -143,26 +143,21 @@ function pesquisar(){
 
     if (pesquisa == ''){
         Toastify({
-      text: "Preencha todos os campos!",
-      duration: 3000,
-      style: {
-      background: "linear-gradient(to right, #FF8C00, #FF4500)",
-        },
-      }).showToast();
-    } else if (pesquisa == 'ballet'){
-        window.location.href = './html/blog.html'
-    } else if (pesquisa == 'variação'){
-        window.location.href = './html/blog.html'
-    } else if (pesquisa == 'sobre'){
-        window.location.href = './html/sobre.html'
-    } else{
-        Toastify({
       text: "Pesquisa não identificada!",
       duration: 3000,
       style: {
       background: "linear-gradient(to right, #FF8C00, #FF4500)",
         },
       }).showToast();
+    } else{
+         fetch(`/pesquisa/pesquisa`)
+        .then(function(response){
+         return response.json();
+        })
+        .catch(function(err){
+         console.log(err);
+        })
+
+ }
     }
-}
 </script>

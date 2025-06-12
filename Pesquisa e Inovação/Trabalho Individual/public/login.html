@@ -85,10 +85,7 @@
                     },
              }).showToast();
         } else {
-
-        }
-
-        console.log("FORM LOGIN: ", emailVar);
+ console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
 
         fetch("/usuarios/autenticar", {
@@ -109,6 +106,7 @@
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
+                    sessionStorage.SENHA_USUARIO = json.senha;
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
@@ -151,6 +149,9 @@
         })
 
         return false;
+        }
+
+       
     }
 
 </script>

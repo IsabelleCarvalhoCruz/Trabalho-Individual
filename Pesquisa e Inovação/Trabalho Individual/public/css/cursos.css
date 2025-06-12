@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 body{
     overflow: hidden;
     height: 100%;
@@ -11,14 +13,14 @@ body{
 .container-dashboard{
     height: 100%;
     width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Lora", serif;
     background-color: #F2F2F2;
 }
 
 .navbar-dashboard{
     position: fixed;
     z-index: 0;
-    background-image: linear-gradient(to top right,#9E1B32, #D34C52);
+    background-image: linear-gradient(to top right, #7b0000, #D34C52);
     font-weight: bolder;
     font-size: 20px;
     display: flex;
@@ -49,6 +51,9 @@ body{
 .cursos{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: 100%;
 }
 
 .cursos a{
@@ -61,11 +66,13 @@ body{
 }
 
 .curso1{
-    background-color: whitesmoke;
-    margin: 80px 240px 100px 330px;
-    padding: 10px 10px 30px 10px;
-    border: 1px solid #9E1B32;
+    text-align: center;
+    background-color: #9E1B32;
+    padding: 10px;
+    margin: 100px 50px 300px 350px;
+    border-radius: 3px;
     filter: drop-shadow(5px 4px 10px gray);
+    color: #F2F2F2;
 }
 
 .curso1 img{
@@ -74,24 +81,29 @@ body{
 }
 
 .curso1 h1{
-    font-size: 25px;
+    font-size: 20px;
+}
+.curso1 p{
+    font-size: 16px;
 }
 
 .curso1 button{
     border: none;
     background-color: #D34C52;
     color: #F2F2F2;
-    padding: 5px;
+    padding: 7px;
     margin-top: 10px;
-    margin-left: 33%;
+    border-radius: 3px;
 }
 
 
 .curso2{
-    background-color: whitesmoke;
-    margin: 80px 240px 100px 20px;
-    border: 1px solid #9E1B32;
-    padding: 10px 10px 30px 10px;
+    text-align: center;
+    background-color: #9E1B32;
+    border-radius: 3px;
+    color: #F2F2F2;
+    margin: 100px 300px 300px 100px;
+    padding: 10px;
     align-items: center;
     filter: drop-shadow(5px 4px 10px gray);
 }
@@ -105,11 +117,14 @@ body{
     border: none;
     background-color: #D34C52;
     color: #F2F2F2;
-    padding: 5px;
+    padding: 7px;
     margin-top: 10px;
-    margin-left: 33%;
+    border-radius: 3px;
 }
 
 .curso2  h1{
-    font-size: 25px;
+    font-size: 20px;
+}
+.curso2 p{
+    font-size: 16px;
 }

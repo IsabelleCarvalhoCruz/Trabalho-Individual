@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 body{
     height: 100%;
     width: 100%;
@@ -10,14 +12,14 @@ body{
 .container-dashboard{
     height: 100%;
     width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Lora", serif;
     background-color: #F2F2F2;
 }
 
 .navbar-dashboard{
     position: fixed;
     z-index: 0;
-    background-image: linear-gradient(to top right,#9E1B32, #D34C52);
+    background-image: linear-gradient(to top right, #7b0000, #D34C52);
     font-weight: bolder;
     font-size: 20px;
     display: flex;
@@ -56,6 +58,7 @@ body{
     padding: 10px 40px 10px 40px;
     margin-top: 50px;
     margin-bottom: 50px;
+    border-radius: 3px;
 }
 
 .container-topico a{
@@ -77,6 +80,12 @@ body{
 
 .topico1 h1{
     text-decoration: underline;
+    text-align: center;
+    font-size: 23px;
+}
+
+.topico1 h2{
+    font-size: 18px;
 }
 
 .imagem img{
@@ -90,14 +99,12 @@ body{
 .imagem{
     flex-direction: column;
     align-items: center;
-    background-color: #9E1B32;
-    padding: 20px 300px 20px 260px;
-    margin-right: 25px;
+    margin: 20px;
 }
 
 .seta img{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     filter: grayscale(100%);
 }
 
@@ -109,8 +116,8 @@ body{
 }
 
 .seta1 img{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     transform: rotate(180deg);
     margin-right: 200px;
     filter: grayscale(100%);
@@ -119,8 +126,8 @@ body{
 .seta2 img{
     position: relative;
     z-index: 2;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     filter: grayscale(100%);
 }
 

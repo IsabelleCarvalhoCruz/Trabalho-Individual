@@ -15,22 +15,10 @@
         <a href="../dashboard.html" class="tsize">Inicio</a>
         <a href="cursos.html" class="tsize">Cursos</a>
         <a href="exercicios.html" class="tsize">Exercicios</a>
+        <a href="forum.html" class="tsize">Forum</a>
         <a href="../index.html" class="tsize">Sair</a>
     </div>
 
-    </div>
-    
-    <div class="forum">
-        <div class="titulo">
-            <div class="principal">
-                <h1>Forum</h1>
-            </div>
-            <h3>Faça parte da nossa comunidade:</h3>
-            <div class="pesquisar">
-            <input type="text" id="ipt_pesquisar_forum">
-            <button onclick="PesquisarForum()">Pesquisar</button>
-            </div>
-        </div>
     </div>
 
              
@@ -145,8 +133,8 @@
         fetch("/avisos/listar").then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
-                    var feed = document.getElementById("feed_container");
-                    var mensagem = document.createElement("span");
+                    const feed = document.getElementById("feed_container");
+                    const mensagem = document.createElement("span");
                     mensagem.innerHTML = "Nenhum resultado encontrado."
                     feed.appendChild(mensagem);
                     throw "Nenhum resultado encontrado!!";
@@ -155,20 +143,20 @@
                 resposta.json().then(function (resposta) {
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
 
-                    var feed = document.getElementById("feed_container");
+                    const feed = document.getElementById("feed_container");
                     feed.innerHTML = "";
                     for (let i = 0; i < resposta.length; i++) {
-                        var publicacao = resposta[i];
+                        const publicacao = resposta[i];
 
-                        // criando e manipulando elementos do HTML via JavaScript
-                        var divPublicacao = document.createElement("div");
-                        var spanID = document.createElement("span");
-                        var spanTitulo = document.createElement("span");
-                        var spanNome = document.createElement("span");
-                        var divDescricao = document.createElement("div");
-                        var divButtons = document.createElement("div");
-                        var btnEditar = document.createElement("button");
-                        var btnDeletar = document.createElement("button");
+                        // criando e manipulando elementos do HTML via JavaScript67
+                        const divPublicacao = document.createElement("div");
+                        const spanID = document.createElement("span");
+                        const spanTitulo = document.createElement("span");
+                        const spanNome = document.createElement("span");
+                        const divDescricao = document.createElement("div");
+                        const divButtons = document.createElement("div");
+                        const btnEditar = document.createElement("button");
+                        const btnDeletar = document.createElement("button");
 
 
                         spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";

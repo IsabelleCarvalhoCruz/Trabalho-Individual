@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -14,20 +16,20 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #9E1B32;
+    background-color: #F2F2F2;
 }
 
 .container-dashboard{
     height: 100%;
     width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Lora", serif;
     background-color: #F2F2F2;
 }
 
 .navbar-dashboard{
     position: fixed;
     z-index: 0;
-    background-image: linear-gradient(to top right,#9E1B32, #D34C52);
+    background-image: linear-gradient(to top right, #7b0000, #D34C52);
     font-weight: bolder;
     font-size: 20px;
     display: flex;
@@ -56,17 +58,20 @@ body{
 }
 
 .app{
-    background-color: #F2F2F2;
+    background-color: #9E1B32;
+    border: 1px solid #9E1B32;
+    border-radius: 3px;
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
     padding: 30px;
+    filter: drop-shadow(3px 4px 8px gray);
 }
 
 .app h1{
     font-weight: bolder;
     font-size: 25px;
-    color: #9E1B32;
+    color: #F2F2F2;
     border-bottom: 1px solid #9E1B32;
     padding-bottom: 30px;
 }
@@ -78,26 +83,26 @@ body{
 .quiz h2{
     font-weight: bolder;
     font-size: 18px;
-    color: #9E1B32;
+    color: #F2F2F2;
 }
 
 
 .btn{
-    background-color: #F2F2F2;
-    color: #9E1B32;
+    background-color: #9E1B32;
+    color: #F2F2F2;
     font-weight: bolder;
     width: 100%;
-    border: 1px solid #9E1B32;
+    border: 1px solid #F2F2F2;
     padding: 10px;
     margin: 10px 0;
     text-align: left;
-    border-radius: 4px;
+    border-radius: 3px;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .btn:hover:not([disabled]){
-    background-color: #9E1B32;
+    background-color: #D34C52;
     color: #F2F2F2;
 }
 
@@ -106,7 +111,7 @@ body{
 }
 
 #next-btn{
-    background-color: #9E1B32;
+    background-color: #D34C52;
     color:#F2F2F2 ;
     font-weight: bolder;
     width: 150px;
@@ -122,30 +127,33 @@ body{
     align-items: center;
     flex-direction: column;
     display: flex;
-    background-color: #F2F2F2;
+    background-color: #9E1B32;
+    border: 1px solid #9E1B32;
+    border-radius: 3px;
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
     padding: 30px;
+    filter: drop-shadow(3px 4px 8px gray);
 }
 
 .card-quizz h1{
     font-weight: bolder;
     font-size: 25px;
-    color: #9E1B32;
+    color: #F2F2F2;
     border-bottom: 1px solid #9E1B32;
     padding-bottom: 30px;
 }
 
 .card-quizz button{
-    background-color: #9E1B32;
+    background-color: #D34C52;
     color:#F2F2F2 ;
     font-weight: bolder;
     width: 200px;
     border: none;
     padding: 10px;
     margin: 20px;
-    border-radius: 4px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
@@ -154,6 +162,6 @@ body{
 }
 
 .incorrect{
-    background-color: #ff9393;
+    background-color: #c30010;
 }
 

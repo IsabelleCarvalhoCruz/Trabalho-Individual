@@ -31,7 +31,25 @@
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui incidunt vero, iste earum odio, quod neque rem provident culpa itaque, adipisci similique? Voluptatibus veritatis facilis laborum veniam. Laboriosam, repudiandae accusantium.</h2>
 
 
-        <button> <a href="cursos.html">Finalizar!</a></button>
+        <button onclick="finalizar()"> <a href="cursos.html">Finalizar!</a></button>
 
     </div>
     </div>
+    </div>
+    </body>
+    </html>
+
+    <script>
+
+
+      function finalizar(){         
+    fetch(`curso/inserirStatus`)
+  .then(function(response){
+    return response.json();
+  })
+  .catch(function(err){
+    console.log(err);
+  })}
+
+
+    </script>

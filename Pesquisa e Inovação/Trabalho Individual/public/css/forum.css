@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 body{
     height: 100%;
     width: 100%;
@@ -10,14 +12,14 @@ body{
 .container-dashboard{
     height: 100%;
     width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Lora", serif;
     background-color:#F2F2F2;
 }
 
 .navbar-dashboard{
     position: fixed;
     z-index: 0;
-    background-image: linear-gradient(to top right,#9E1B32, #D34C52);
+    background-image: linear-gradient(to top right, #7b0000, #D34C52);
     font-weight: bolder;
     font-size: 20px;
     display: flex;
@@ -29,12 +31,12 @@ body{
 }
 
 .navbar-dashboard h1{
-    font-size: 25px;
+    font-size: 23px;
     color: white;
 }
 
 .navbar-dashboard a{
-    font-size: 25px;
+    font-size: 23px;
     text-decoration: none;
     color: white;
     transition: all 0.3s ease-in-out;
@@ -45,53 +47,6 @@ body{
     font-size: 26px;
 }
 
-.forum{
-    background-color: #9E1B32;
-    padding: 20px 40% 20px 40%;
-}
-
-.principal h1{
-    font-size: 30px;
-    color: #F2F2F2;
-    text-align: center;
-}
-
-.titulo{
-    display: flex;
-    flex-direction: column;
-}
-
-.titulo h3{
-    font-size: 18px;
-    color: #F2F2F2;
-    text-align: center;
-}
-
-.pesquisar{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.pesquisar button{
-    border: none;
-    color: #F2F2F2;
-    background-color: #D34C52;
-    padding: 6px;
-    margin-left: 3%;
-}
-
-.pesquisar input{
-    background-color: #F2F2F2;
-    border: none;
-    padding: 6px 70% 6px 65%;
-    margin-left: -50%;
-}
-
-.pesquisar input:focus{
-    outline-color: #D34C52;
-}
 
 .div-form{
     display: flex;
@@ -123,7 +78,7 @@ body{
     border: none;
     color: #F2F2F2;
     background-color: #D34C52;
-    padding: 10px 40px 10px 40px;
+    padding: 10px 20px;
     margin-top: 10px;
 }
 
@@ -132,6 +87,18 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.mural h1{
+      font-size: 23px; 
+}
+
+.div-form h1{
+    font-size: 23px;
+}
+
+.div-form h2{
+    font-size: 20px;
 }
 
 ::-webkit-scrollbar{

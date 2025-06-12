@@ -51,11 +51,9 @@ constraint pkCursoExercicio primary key (idExercicio, fkCurso)
 
 CREATE TABLE Desempenho(
 idDesempenho int,
-NotaMedia int,
-NotaUsuario int,
+Nota int,
 Acertos int,
 Erros int,
-Porcentagem int,
 fkCursoDesempenho int,
 fkCursoUsuario int, 
 fkExercicio int, 
@@ -72,13 +70,13 @@ constraint pkDesempenho primary key (idDesempenho,fkCursoDesempenho,
 fkCursoUsuario,fkExercicio,fkCursoExercicio)
 );
 
--- DANDO SELECT PARA VERIFICAR SE OS DADOS DO LOGIN E CADASTROO ESTÃO SENDO INSERIDOS
+-- DANDO SELECT PARA VERIFICAR SE OS DADOS DO LOGIN E CADASTRO ESTÃO SENDO INSERIDOS
 select * from Usuario;
 
 -- INSERINDO DADOS 
-insert into Curso (nome, descrição) values
-('Diferentes técnicas de ballet','Já pensou em ser bailarina mas não sabe por onde começar? Aprenda um pouco mais sobre aqui!'),
-('Alongamento e Fortalecimento', 'No mundo do ballet ter sua força e elasticidade em dia é muito importante para execução de passos mais complexos, saiba como manter sua saúde em dia!');
+insert into Curso (nome, descrição, Status) values
+('Diferentes técnicas de ballet','Já pensou em ser bailarina mas não sabe por onde começar? Aprenda um pouco mais sobre aqui!', 'Não Feito'),
+('Alongamento e Fortalecimento', 'No mundo do ballet ter sua força e elasticidade em dia é muito importante para execução de passos mais complexos, saiba como manter sua saúde em dia!', 'Não Feito');
 
 insert into Exercicio (idExercicio, nome, descrição, fkCurso) values
 (1, 'Diferentes técnicas de ballet','Exercicios para você aprofundar seus conhecimentos sobre a técnica do ballet!', 1),
@@ -89,4 +87,32 @@ insert into Blog(titulo,descrição, fkUsuarioBlog) values
 ('Metodologias do ballet','Saiba diferenciar as metodologias de ballet, onde surgiram e sua importância!', 1),
 ('Variações de Repertório', 'Saiba um pouco mais sobre as diferentes encenações e variações criadas no mundo do ballet!', 1);
 
+
+-- DANDO SELECTS NO PROJETO
+
+-- SELECT PARA VER A NOTA TOTAL DO USUARIO
+select AVG(Nota) as Nota_Média from Desempenho join Curso 
+on Desempenho.fkCursoDesempenho = Curso.idCurso;
+
+-- SELECT PARA VER A QUANTIDADE DE ERROS E ACERTOS
+select Acertos, Erros from Desempenho join Curso 
+on Desempenho.fkCursoDesempenho = Curso.idCurso;
+
+-- SELECT PARA VER PONTUAÇÃO MAXIMA
+select MAX(Nota) as Nota_Máxima from Desempenho join Curso  
+on Desempenho.fkCursoDesempenho = Curso.idCurso 
+join Usuario on Usuario.idUsuario = Curso.fkUsuarioCurso;
+
+-- SELECT PARA VER ESTADO ATUAL DA ATIVIDADE
+select Status from Curso;
+
+-- ALTERANDO DADOS DE STATUS
+update Curso set Status = 'Feito' where fkUsuarioCurso = 1;
+
+-- PESQUISANDO DADOS 
+select * from Blog where Descrição like '%';
+
+-- DANDO INSERT DE DADOS DO QUIZZ
+insert into Desempenho (Nota,Acertos,Erros,fkCursoUsuario) values
+('','','',1);
 

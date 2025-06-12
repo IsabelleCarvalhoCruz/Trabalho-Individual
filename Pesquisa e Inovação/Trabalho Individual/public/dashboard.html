@@ -18,7 +18,7 @@
         <a href="index.html" class="tsize">Sair</a>
     </div>
 
-    <body onload="obterDados()"></body>
+    <body onload="obterDados()">
     <div class="graficos">
 
 
@@ -66,11 +66,41 @@
 
 <script>
 
-var Grafico1 = document.getElementById('Grafico1');
-var Grafico2 = document.getElementById('Grafico2');
-var Grafico3 = document.getElementById('Grafico3');
+ function obterDados(){
+  const idUsuario = sessionStorage.ID_USUARIO;
 
+  fetch(`/dashboard/buscarDesempenho/${idUsuario}`)
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data){
+    plotarGraficoLinha(data);
+    plotarGraficoBarra(data);
+    plotarGraficoPizza(data);
+  })
+  .catch(function(err){
+    console.log(err);
+  })
 
+ plotarGraficoLinha(dados);
+ plotarGraficoBarra(dados);
+ plotarGraficoPizza(dados);
+
+ }
+
+ function plotarGraficoBarra(dados){
+
+  var notaUsuario = [];
+  var notaMedia = [];
+
+  // Preenchendo os arrays com os dados
+  for(var i = 0; i < dados.length; i++){
+    votos.push(dados[i].votos);
+    jogadores.push(dados[i].jogador);
+  }
+
+  var Grafico1 = document.getElementById('Grafico1');
+  
     Grafico1 = new Chart(Grafico1, {
     type: 'bar',
     data: {
@@ -104,34 +134,22 @@ var Grafico3 = document.getElementById('Grafico3');
     }
 });
 
-     Grafico2 = new Chart(Grafico2, {
-        type: 'doughnut',
-    data: {
-        labels: ['Feitos', 'Não Feitos', 'Fazendo'], 
-        datasets: [{
-            data: [3, 2, 4],
-            backgroundColor: [ '#cc4a48', '#68061D', '#9E1B32'],
-            borderColor: ['#cc4a48', '#68061D', '#9E1B32']
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: true,
-                labels: {
-                                font: {
-                                    size: 10
-                                }
-                            }
-                
-            }
-        }
-    }
-});
 
+}
 
-    Grafico3 = new Chart(Grafico3, {
+ function plotarGraficoLinha(dados){
+
+  var notaUsuario = [];
+  var notaMedia = [];
+
+  for(var i = 0; i < dados.length; i++){
+    votos.push(dados[i].votos);
+    jogadores.push(dados[i].jogador);
+  }
+  
+  var Grafico3 = document.getElementById('Grafico3');
+
+   Grafico3 = new Chart(Grafico3, {
     type: 'line',
     data: {
         labels: ['Sua Nota', 'Nota Média'],
@@ -163,5 +181,49 @@ var Grafico3 = document.getElementById('Grafico3');
         }
     }
 });
+
+
+ }
+
+ function plotarGraficoPizza(dados){
+
+  var notaUsuario = [];
+  var notaMedia = [];
+
+  // Preenchendo os arrays com os dados
+  for(var i = 0; i < dados.length; i++){
+    votos.push(dados[i].votos);
+    jogadores.push(dados[i].jogador);
+  }
+
+  var Grafico2 = document.getElementById('Grafico2');
+
+     Grafico2 = new Chart(Grafico2, {
+        type: 'doughnut',
+    data: {
+        labels: ['Feitos', 'Não Feitos', 'Fazendo'], 
+        datasets: [{
+            data: [3, 2, 4],
+            backgroundColor: [ '#cc4a48', '#68061D', '#9E1B32'],
+            borderColor: ['#cc4a48', '#68061D', '#9E1B32']
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true,
+                labels: {
+                                font: {
+                                    size: 10
+                                }
+                            }
+                
+            }
+        }
+    }
+});
+
+ }
 
 </script>
